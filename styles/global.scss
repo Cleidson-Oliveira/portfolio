@@ -1,6 +1,8 @@
 :root {
     --blue-dark: #000111;
     --blue-light: #d0d0ff;
+
+    --jump: jump 1.3s ease infinite;
 }
 
 * {
@@ -18,3 +20,29 @@ body {
     height: 100%;
     background: var(--blue-dark);
 }
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    
+    15% {
+        transform: translateY(-1rem);
+    }
+    
+    30% {
+        transform: translateY(0);
+    }
+    
+    45% {
+        transform: translateY(-0.7rem);
+    }
+
+    60% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+};

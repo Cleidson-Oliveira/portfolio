@@ -15,3 +15,9 @@
         font-size: inherit;
     }
 }
+
+.socialIcom:hover {
+    svg {
+        animation: var(--jump);
+    }
+}
