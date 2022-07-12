@@ -1,8 +1,13 @@
+:root {
+    --blue-dark: #000111;
+    --blue-light: #d0d0ff;
+}
+
 * {
     margin: 0;
     padding: 0;
-    color: rgb(208, 208, 255);
-    font-family: sans-serif;
+    color: var(--blue-light);
+    font-family: "Roboto", sans-serif;
 }
 
 html {
@@ -11,5 +16,5 @@ html {
 
 body {
     height: 100%;
-    background: rgb(0, 1, 17);
+    background: var(--blue-dark);
 }

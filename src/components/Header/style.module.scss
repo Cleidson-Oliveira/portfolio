@@ -22,6 +22,6 @@
 }
 
 .menuItem:hover {
-    color: rgb(0, 1, 17);
-    background: rgb(208, 208, 255);
+    color: var(--blue-dark);
+    background: var(--blue-light);
 }
