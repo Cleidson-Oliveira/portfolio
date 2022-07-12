@@ -1,0 +1,27 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 3rem;
+}
+
+.menu {
+    display: flex;
+    gap: .5rem;
+    list-style: none;
+}
+
+.menuItem {
+    padding: .5rem;
+    border-radius: .2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: color .3s ease, background-color .3s ease;
+}
+
+.menuItem:hover {
+    color: rgb(0, 1, 17);
+    background: rgb(208, 208, 255);
+}
