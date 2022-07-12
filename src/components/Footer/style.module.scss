@@ -1,0 +1,17 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: 10rem;
+}
+
+.socialIcom {
+    text-decoration: none;
+    font-size: 2rem;
+
+    svg {
+        font-size: inherit;
+    }
+}
