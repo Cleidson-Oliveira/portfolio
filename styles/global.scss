@@ -1,6 +1,7 @@
 :root {
     --blue-dark: #000111;
     --blue-light: #d0d0ff;
+    --grey-light: #8686c0;
 
     --jump: jump 1.3s ease infinite;
 }
@@ -8,7 +9,6 @@
 * {
     margin: 0;
     padding: 0;
-    color: var(--blue-light);
     font-family: "Roboto", sans-serif;
 }
 
@@ -18,7 +18,11 @@ html {
 
 body {
     height: 100%;
-    background: var(--blue-dark);
+    background-color: var(--blue-dark);
+}
+
+p {
+    color: var(--blue-light);
 }
 
 @keyframes jump {

@@ -12,12 +12,14 @@
     font-size: 2rem;
 
     svg {
+        color: var(--blue-light);
         font-size: inherit;
     }
 }
 
 .socialIcom:hover {
     svg {
+        color: var(--grey-light);
         animation: var(--jump);
     }
 }

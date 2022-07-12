@@ -1,16 +1,14 @@
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Aside from "./components/Aside";
+
+import style from "./style.module.scss"
 import "../styles/global.scss";
 
 function App () {
   return (
-    <>
-      <Header />
-      <h1>
-        Cleidson Oliveira
-      </h1>
-      <Footer />
-    </>
+    <div className={style.conteiner}>
+      <Aside />
+      <main></main>
+    </div>
   )
 }
 

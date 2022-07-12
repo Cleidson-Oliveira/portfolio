@@ -1,19 +1,24 @@
+import avatar from "../../../assets/images/Cleidson.jpg"
+import Navigation from "../Navigation";
+
 import style from "./style.module.scss";
 
 export default function Header () {
     return (
-        <header className={style.header}>
-            <div>
-                <p>logo</p>
+        <div className={style.header}>
+            <div className={style.about} >
+                <img
+                    className={style.avatar}
+                    src={avatar}
+                    alt="Cleidson"
+                />
+                <p>
+                    Hi! <br />
+                    I'm Cleidson Oliveira, <br />
+                    I'm a Front-end developer.
+                </p>
             </div>
-            <nav>
-                <ul className={style.menu}>
-                    <li className={style.menuItem}>Home</li>
-                    <li className={style.menuItem}>Projects</li>
-                    <li className={style.menuItem}>Contact</li>
-                    <li className={style.menuItem}>About me</li>
-                </ul>
-            </nav>
-        </header>
+            <Navigation />
+        </div>
     )
 }
