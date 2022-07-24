@@ -1,0 +1,114 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 72%;
+    box-sizing: border-box;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 3rem;
+}
+
+.title {
+    height: 15%;
+    color: var(--blue-light);
+}
+
+.homeContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 85%;
+    text-align: end;
+
+    p {
+        color: var(--blue-light);
+        font-size: 1.8rem;
+        font-weight: 500;
+        font-style: italic;
+    }
+    
+    p:first-child {
+        font-size: 1.4rem;
+    }
+    
+    h1 {
+        color: var(--grey-light);
+        font-size: 2.5rem;
+    }
+}
+
+.projectsContent {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+    height: 85%;
+}
+
+.menuProjects {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: .3rem;
+    width: 25%;
+
+    button {
+        background-color: var(--grey-light);
+        box-sizing: border-box;
+        padding: .5rem;
+        border: var(--grey-middle) 2px solid;
+        border-radius: .3rem;
+        transition: color .3s ease, background-color .3s ease;
+        color: var(--grey-dark);
+        font-weight: bold;
+    
+        &:hover{
+            background-color: var(--grey-middle);
+            color: var(--grey-light);
+        }
+    }
+}
+
+.cardProject {
+    width: 65%;
+    height: 100%;
+    background: rgba(202, 203, 214, 0.055);
+    border-radius: .5rem;
+    display: flex;
+    padding: 2rem;
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    h1 {
+        color: var(--grey-light);
+    }
+
+    & > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: flex-end;
+        width: 70%;
+        height: 50%;
+        background: #ffffff99;
+
+        color: white;
+    }
+
+    span {
+        font-size: 1.2rem;
+        color: var(--grey-light);
+    }
+}

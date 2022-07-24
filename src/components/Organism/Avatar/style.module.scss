@@ -1,0 +1,19 @@
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 140px;
+    background: linear-gradient(to top, var(--blue-dark), var(--grey-middle));
+    padding: 0.3rem;
+    border-radius: 50%;
+
+    img {
+        width: 92%;
+        height: 92%;
+        background: linear-gradient(to bottom, var(--blue-dark), var(--grey-middle));
+        padding: 0.3rem;
+        border: 2px solid var(--grey-dark);
+        border-radius: 50%;
+    }
+}

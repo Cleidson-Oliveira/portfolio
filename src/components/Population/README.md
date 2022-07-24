@@ -1,0 +1,1 @@
+Populações são agrupamentos de elementos iguais, como listas e menus

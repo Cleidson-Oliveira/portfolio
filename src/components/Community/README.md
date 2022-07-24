@@ -1,0 +1,1 @@
+Comunidades são grupos de organismos e populações como um post, um card ou um componente de header.

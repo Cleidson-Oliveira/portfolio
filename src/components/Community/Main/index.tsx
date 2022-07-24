@@ -4,7 +4,7 @@ export default function Main () {
 
     return (
         <main className={style.wrapper}>
-            {/* <div className={style.card}>
+            <div className={style.card}>
                 <h1 className={style.title}>
                     Home
                 </h1>
@@ -21,57 +21,35 @@ export default function Main () {
                         </p>
                     </div>
                 </div>
-            </div> */}
+            </div>
             <div className={style.card}>
                 <h1 className={style.title}>
                     Projects
                 </h1>
                 
                 <div className={style.projectsContent}>
-                    <div>
-                        <p>
-                            Hi there, I'm
-                        </p>
+                    <nav className={style.menuProjects}>
+                        <button>Ângela Reys Fotografia</button>
+                        <button>5Ws</button>
+                        <button>Yu-Gi-tools</button>
+                        <button>Em breve</button>
+                        <button>Em breve</button>
+                        <button>Em breve</button>
+                    </nav>
+                    <div className={style.cardProject}>
+
                         <h1>
                             Cleidson Oliveira
                         </h1>
-                        <p>
-                            Front-end Developer
-                        </p>
+                        <div>
+                            Project image
+                        </div>
+                        <span>
+                            Text about this project, text about this project, text about this project, text about this project, text about this project, text about this project
+                        </span>
+                        
                     </div>
-                    <div>
-                        <p>
-                            Hi there, I'm
-                        </p>
-                        <h1>
-                            Cleidson Oliveira
-                        </h1>
-                        <p>
-                            Front-end Developer
-                        </p>
-                    </div>
-                    <div>
-                        <p>
-                            Hi there, I'm
-                        </p>
-                        <h1>
-                            Cleidson Oliveira
-                        </h1>
-                        <p>
-                            Front-end Developer
-                        </p>
-                    </div>
-                    <div>
-                        <p>
-                            Hi there, I'm
-                        </p>
-                        <h1>
-                            Cleidson Oliveira
-                        </h1>
-                        <p>
-                            Front-end Developer
-                        </p>
-                    </div>
+                    
                 </div>
                 
             </div>

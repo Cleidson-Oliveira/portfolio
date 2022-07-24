@@ -3,9 +3,9 @@ import { FaLinkedin } from "react-icons/fa";
 
 import style from "./style.module.scss";
 
-export default function Footer () {
+export default function SocialList () {
     return (
-        <footer className={style.footer}>
+        <div className={style.socialList}>
             <a 
                 className={style.socialIcom}
                 href="https://www.linkedin.com/in/cleidson-oliveira-963ba7230/"
@@ -18,6 +18,6 @@ export default function Footer () {
             >
                 <AiOutlineGithub />
             </a>
-        </footer>
+        </div>
     )
 }

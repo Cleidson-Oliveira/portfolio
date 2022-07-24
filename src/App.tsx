@@ -1,7 +1,7 @@
-import Aside from "./components/Aside";
-import Main from "./components/Main";
+import Aside from "./components/Community/Aside";
+import Main from "./components/Community/Main";
 
-import style from "./style.module.scss"
+import style from "../styles/style.module.scss"
 import "../styles/global.scss";
 
 function App () {

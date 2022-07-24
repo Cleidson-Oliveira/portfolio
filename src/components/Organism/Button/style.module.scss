@@ -1,0 +1,21 @@
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    border-radius: .5rem;
+    background: var(--blue-light);
+    border: var(--grey-middle) 2px solid;
+    transition: color .3s ease, background-color .3s ease;
+
+    svg {
+        font-size: 1.1rem;
+        color: var(--blue-dark);
+    }
+
+    &:hover {
+        background-color: var(--grey-light);
+    }
+}

@@ -1,7 +1,9 @@
 :root {
-    --blue-dark: #000111;
     --blue-light: #d0d0ff;
+    --blue-dark: #000111;
     --grey-light: #8686c0;
+    --grey-middle: #313156;
+    --grey-dark: #303044;
 
     --jump: jump 1.3s ease infinite;
 }
@@ -9,7 +11,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Roboto", sans-serif;
+    font-family: "Josefin Sans", "Roboto", sans-serif;
 }
 
 html {
@@ -18,11 +20,18 @@ html {
 
 body {
     height: 100%;
+    background: linear-gradient(to bottom, var(--blue-dark), var(--grey-middle));
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     background-color: var(--blue-dark);
 }
 
 p {
     color: var(--blue-light);
+}
+
+button {
+    cursor: pointer;
 }
 
 @keyframes jump {

@@ -1,0 +1,21 @@
+.socialList {
+    display: flex;
+    gap: 1rem;
+}
+
+.socialIcom {
+    text-decoration: none;
+    font-size: 2rem;
+
+    svg {
+        color: var(--blue-light);
+        font-size: inherit;
+    }
+
+    &:hover {
+        svg {
+            color: var(--grey-light);
+            animation: var(--jump);
+        }
+    }
+}
