@@ -1,0 +1,38 @@
+.cardFace {
+    width: 100%;
+    height: 100%;
+    background: rgba(202, 203, 214, 0.055);
+    border-radius: .5rem;
+    display: flex;
+    padding: 2rem;
+    box-sizing: border-box;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: absolute;
+    backface-visibility: hidden;
+    box-shadow: #00000080 8px 7px 20px 0px;
+
+    h1 {
+        color: var(--grey-light);
+    }
+
+    & > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: flex-end;
+        width: 70%;
+        height: 50%;
+        background: #ffffff99;
+        color: white;
+    }
+
+    span {
+        font-size: 1.2rem;
+        color: var(--grey-light);
+    }
+
+    &:last-child {
+        transform: rotateY(180deg);
+    }
+}

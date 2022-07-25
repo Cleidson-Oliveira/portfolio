@@ -9,6 +9,7 @@
     background: var(--blue-light);
     border: var(--grey-middle) 2px solid;
     transition: color .3s ease, background-color .3s ease;
+    box-shadow: rgba(0, 0, 0, 0.6392156863) -10px 3px 20px 0px;
 
     svg {
         font-size: 1.1rem;

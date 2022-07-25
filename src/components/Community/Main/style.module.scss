@@ -17,7 +17,8 @@
 
 .title {
     height: 15%;
-    color: var(--blue-light);
+    color: var(--grey-light);
+    text-shadow: 4px 4px 6px black;
 }
 
 .homeContent {
@@ -43,6 +44,7 @@
     h1 {
         color: var(--grey-light);
         font-size: 2.5rem;
+        text-shadow: 4px 4px 6px black;
     }
 }
 
@@ -72,6 +74,7 @@
         transition: color .3s ease, background-color .3s ease;
         color: var(--grey-dark);
         font-weight: bold;
+        box-shadow: #000000a3 0px 10px 20px 0px;
     
         &:hover{
             background-color: var(--grey-middle);
@@ -83,32 +86,18 @@
 .cardProject {
     width: 65%;
     height: 100%;
-    background: rgba(202, 203, 214, 0.055);
-    border-radius: .5rem;
     display: flex;
-    padding: 2rem;
-    box-sizing: border-box;
-    flex-direction: column;
-    gap: 1.5rem;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: ease .7s all;
+}
 
-    h1 {
-        color: var(--grey-light);
-    }
-
-    & > div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        align-self: flex-end;
-        width: 70%;
-        height: 50%;
-        background: #ffffff99;
-
-        color: white;
-    }
-
-    span {
-        font-size: 1.2rem;
-        color: var(--grey-light);
-    }
+.cardProjectFlip {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: ease .7s all;
+    transform: rotateY(180deg);
 }
