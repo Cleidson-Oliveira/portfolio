@@ -1,4 +1,4 @@
-import avatar from "../../../../assets/images/Cleidson.jpg";
+import avatar from "assets/images/Cleidson.jpg";
 
 import style from "./style.module.scss";
 
