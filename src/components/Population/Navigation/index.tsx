@@ -7,25 +7,29 @@ import { MdWork } from "react-icons/md";
 import style from "./style.module.scss";
 
 export default function Navigation () {
+
+    const handleFocus = (n: number) => {
+        window.scrollTo(0, window.innerHeight * n)
+    }
     return (
         <nav className={style.menu}>
-            <Button>
+            <Button onClick={() => {handleFocus(0)}}>
                 <AiFillHome />
             </Button>
 
-            <Button>
+            <Button onClick={() => {handleFocus(1)}}>
                 <MdWork />
             </Button>
             
-            <Button>
+            <Button onClick={() => {handleFocus(2)}}>
                 <FaGraduationCap />
             </Button>
             
-            <Button>
+            <Button onClick={() => {handleFocus(3)}}>
                 <AiFillPhone />
             </Button>
             
-            <Button>
+            <Button onClick={() => {handleFocus(4)}}>
                 <FaUser />
             </Button>
         </nav>
