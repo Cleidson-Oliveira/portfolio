@@ -3,6 +3,8 @@ import { Button } from "../../Organism/Button";
 import { AiFillHome, AiFillPhone } from "react-icons/ai";
 import { FaUser, FaGraduationCap } from "react-icons/fa";
 import { MdWork } from "react-icons/md";
+import { GrCertificate } from "react-icons/gr";
+
 
 import style from "./style.module.scss";
 
@@ -22,7 +24,7 @@ export default function Navigation () {
             </Button>
             
             <Button onClick={() => {handleFocus(2)}}>
-                <FaGraduationCap />
+                <GrCertificate />
             </Button>
             
             <Button onClick={() => {handleFocus(3)}}>
