@@ -1,6 +1,6 @@
 import style from "./style.module.scss";
 
-export default function HomeSession () {
+export function HomeSession () {
 
     return (
         <>
