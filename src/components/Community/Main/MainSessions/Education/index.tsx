@@ -78,7 +78,7 @@ export const EducationSession = () => {
                 onSlideChange={() => console.log('slide change')}
             >
                 {EducationData.map(course => (
-                    <SwiperSlide>
+                    <SwiperSlide key={course.courseThumbnailUrl}>
                         <div className={style.educationCard}>
                             <img src={course.courseThumbnailUrl} alt={course.courseName} />
                             <h2>{course.courseName}</h2>
