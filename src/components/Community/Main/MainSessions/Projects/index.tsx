@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { FaceCard } from "../FaceCard";
+import { FaceCard } from "../../../FaceCard";
 
 import style from "./style.module.scss";
 
