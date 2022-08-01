@@ -34,7 +34,7 @@ export const EducationSession = () => {
             courseDescription: "Neste curso iniciei o aprendixado no desenvolvimento wed, aprendendo aspectos importantes das 3 línguagens básicas do front-end bem como alguns conceitos de SEO e responsividade.",
             courseSkillsLearned: [ "html", "css", "javascript" ],
             courseCertificateUrl: "https://drive.google.com/file/d/1Yg5XFL1_A1bUpIonoTPFp0JjMGNkENle/view?usp=sharing",
-            courseRepositorieUrl: "https://img-b.udemycdn.com/course/240x135/1616938_8f0b_2.jpg",
+            courseRepositorieUrl: "https://github.com/Cleidson-Oliveira/curso-web-design",
             courseIsOver: true,
         },
         {
