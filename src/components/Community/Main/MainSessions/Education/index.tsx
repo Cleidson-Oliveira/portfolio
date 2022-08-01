@@ -13,18 +13,27 @@ import "swiper/css";
 import "swiper/css/a11y";
 import "swiper/css/pagination";
 
+type SkillsType = "html" | "css" | "javascript" | "sass" | "sql" | "php" | "bootstrap"
+
+interface EducationDataType {
+    courseName: string,
+    courseThumbnailUrl: string,
+    courseDescription: string,
+    courseCertificateUrl: string,
+    courseRepositorieUrl: string,
+    courseIsOver: boolean,
+    courseSkillsLearned: SkillsType[],
+}
+
 export const EducationSession = () => {
 
-    const EducationData = [
+    const EducationData: EducationDataType[] = [
         {
             courseName: "Web Design",
             courseThumbnailUrl: "https://img-b.udemycdn.com/course/240x135/1616938_8f0b_2.jpg",
             courseDescription: "Neste curso iniciei o aprendixado no desenvolvimento wed, aprendendo aspectos importantes das 3 línguagens básicas do front-end bem como alguns conceitos de SEO e responsividade.",
-            courseSkillsLearned: [
-                () => {return <AiFillHtml5 />},
-                () => {return <DiCss3 />},
-                () => {return <IoLogoJavascript />},
-            ],
+            courseSkillsLearned: [ "html", "css", "javascript" ],
+            courseCertificateUrl: "https://drive.google.com/file/d/1Yg5XFL1_A1bUpIonoTPFp0JjMGNkENle/view?usp=sharing",
             courseRepositorieUrl: "https://img-b.udemycdn.com/course/240x135/1616938_8f0b_2.jpg",
             courseIsOver: true,
         },
@@ -32,40 +41,40 @@ export const EducationSession = () => {
             courseName: "Desenvolvimento Web",
             courseThumbnailUrl: "https://img-b.udemycdn.com/course/240x135/1341268_c20e_3.jpg",
             courseDescription: "(Em andamento) Neste curso estou aprendendo coisas novas sobre HTML, CSS e JS, além de ter o primeiro contato com SASS, Bootstrap, PHP e SQL.",
-            courseSkillsLearned: [
-                () => {return <DiBootstrap />},
-                () => {return <IoLogoSass />},
-                () => {return <FaPhp />},
-                () => {return <GrMysql />},
-            ],
+            courseSkillsLearned: [ "bootstrap", "sass", "php", "sql" ],
+            courseCertificateUrl: "https://drive.google.com/file/d/1cpeEEp2s1RjUxc-DYaP_okREfYegQv6X/view?usp=sharing",
             courseRepositorieUrl: "https://img-b.udemycdn.com/course/240x135/1616938_8f0b_2.jpg",
             courseIsOver: false,
         },
         {
             courseName: "Web Design",
             courseThumbnailUrl: "https://img-b.udemycdn.com/course/240x135/1616938_8f0b_2.jpg",
-            courseDescription: "Neste curso dei meus primeiros passos no desenvolvimento wed, aprendendo aspectos importantes das 3 línguagens básicas do front-end bem como alguns conceitos de SEO e responsividade.",
-            courseSkillsLearned: [
-                () => {return <AiFillHtml5 />},
-                () => {return <DiCss3 />},
-                () => {return <IoLogoJavascript />},
-            ],
+            courseDescription: "Neste curso iniciei o aprendixado no desenvolvimento wed, aprendendo aspectos importantes das 3 línguagens básicas do front-end bem como alguns conceitos de SEO e responsividade.",
+            courseSkillsLearned: [ "html", "css", "javascript" ],
+            courseCertificateUrl: "https://drive.google.com/file/d/1Yg5XFL1_A1bUpIonoTPFp0JjMGNkENle/view?usp=sharing",
             courseRepositorieUrl: "https://img-b.udemycdn.com/course/240x135/1616938_8f0b_2.jpg",
-            courseIsOver: false,
+            courseIsOver: true,
         },
         {
-            courseName: "Web Design",
-            courseThumbnailUrl: "https://img-b.udemycdn.com/course/240x135/1616938_8f0b_2.jpg",
-            courseDescription: "Neste curso dei meus primeiros passos no desenvolvimento wed, aprendendo aspectos importantes das 3 línguagens básicas do front-end bem como alguns conceitos de SEO e responsividade.",
-            courseSkillsLearned: [
-                () => {return <AiFillHtml5 />},
-                () => {return <DiCss3 />},
-                () => {return <IoLogoJavascript />},
-            ],
+            courseName: "Desenvolvimento Web",
+            courseThumbnailUrl: "https://img-b.udemycdn.com/course/240x135/1341268_c20e_3.jpg",
+            courseDescription: "(Em andamento) Neste curso estou aprendendo coisas novas sobre HTML, CSS e JS, além de ter o primeiro contato com SASS, Bootstrap, PHP e SQL.",
+            courseSkillsLearned: [ "bootstrap", "sass", "php", "sql" ],
+            courseCertificateUrl: "https://drive.google.com/file/d/1cpeEEp2s1RjUxc-DYaP_okREfYegQv6X/view?usp=sharing",
             courseRepositorieUrl: "https://img-b.udemycdn.com/course/240x135/1616938_8f0b_2.jpg",
             courseIsOver: false,
-        },
+        },        
     ]
+
+    const skillIcons = {
+        "html": () => <AiFillHtml5 />,
+        "css": () => <DiCss3 />,
+        "javascript": () => <IoLogoJavascript />,
+        "sass": () => <IoLogoSass />,
+        "sql": () => <GrMysql />,
+        "php": () => <FaPhp />,
+        "bootstrap": () => <DiBootstrap />,
+    }
 
     return (
         <div className={style.skillAndEducationContent}>
@@ -87,28 +96,24 @@ export const EducationSession = () => {
                                 <p>Skills</p>
                                 <div>
                                     {course.courseSkillsLearned.map(skill => (
-                                        skill()
+                                        skillIcons[skill]()
                                     ))}
                                 </div>
                             </div>
                             <div className={style.LinksConteiner}>
-
-                                {
-                                course.courseIsOver
-                                ? (<a 
-                                        href={course.courseRepositorieUrl} 
-                                        className={style.link}
-                                    >
+                                { course.courseIsOver ? (
+                                    <a href={course.courseCertificateUrl} className={style.link} target="_blank">
                                         Certificate
-                                    </a>)
-                                : (<a 
-                                        href={course.courseRepositorieUrl} 
-                                        className={style.inactiveLink}
-                                    >
+                                    </a>
+                                ) : (
+                                    <span className={style.inactiveLink} >
                                         In progress
-                                    </a>)
-                                }
-                                <a className={style.link} href={course.courseRepositorieUrl}>Repositories</a>
+                                    </span>
+                                )}
+
+                                <a className={style.link} href={course.courseRepositorieUrl} target="_blank">
+                                    Repositories
+                                </a>
                             </div>
                         </div>
                     </SwiperSlide>

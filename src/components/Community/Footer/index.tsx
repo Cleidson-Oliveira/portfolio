@@ -7,7 +7,8 @@ export default function Footer () {
         <footer className={style.footer}>
             <SocialList />
             <p>
-                © Copyright 2022 All rights reserved
+                Cleidson Oliveira 2022 <br />
+                All rights reserved
             </p>
         </footer>
     )
