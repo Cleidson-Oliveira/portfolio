@@ -43,7 +43,7 @@ export const EducationSession = () => {
             courseDescription: "(Em andamento) Neste curso estou aprendendo coisas novas sobre HTML, CSS e JS, além de ter o primeiro contato com SASS, Bootstrap, PHP e SQL.",
             courseSkillsLearned: [ "bootstrap", "sass", "php", "sql" ],
             courseCertificateUrl: "https://drive.google.com/file/d/1cpeEEp2s1RjUxc-DYaP_okREfYegQv6X/view?usp=sharing",
-            courseRepositorieUrl: "https://img-b.udemycdn.com/course/240x135/1616938_8f0b_2.jpg",
+            courseRepositorieUrl: "https://github.com/Cleidson-Oliveira/curso-desenvolvimento-web",
             courseIsOver: false,
         },
         {
