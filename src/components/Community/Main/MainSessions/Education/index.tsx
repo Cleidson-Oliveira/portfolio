@@ -112,7 +112,7 @@ export const EducationSession = () => {
                                 )}
 
                                 <a className={style.link} href={course.courseRepositorieUrl} target="_blank">
-                                    Repositories
+                                    Repository
                                 </a>
                             </div>
                         </div>

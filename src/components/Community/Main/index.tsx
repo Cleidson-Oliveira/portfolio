@@ -1,3 +1,4 @@
+import { Contact } from "./MainSessions/Contact";
 import { EducationSession } from "./MainSessions/Education";
 import { HomeSession } from "./MainSessions/Home";
 import { ProjectsSession } from "./MainSessions/Projects";
@@ -29,10 +30,13 @@ export default function Main () {
                 </h1>
                 <EducationSession />
             </section>
+            
+             
             <section className={style.card}>
                 <h1 className={style.title}>
                     Contact
                 </h1>
+                <Contact />
             </section>
             <section className={style.card}>
                 <h1 className={style.title} id="teste">
