@@ -32,8 +32,12 @@
             align-self: flex-end;
             width: 70%;
             height: 100%;
-            background: #ffffff99;
-            color: white;
+            padding: 1rem;
+            box-sizing: border-box;
+
+            img {
+                width: 100%;
+            }
         }
     }
 

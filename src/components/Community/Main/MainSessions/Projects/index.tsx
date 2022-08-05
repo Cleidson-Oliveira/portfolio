@@ -14,7 +14,7 @@ export const ProjectsSession = () => {
     const projectsData = [
         {
             name: "Ângela Reys Fotografia",
-            image: "Project image",
+            image: "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/projectThumbs/angelareysfotografia.png",
             description: "Text about this project, text about this project, text about this project, text about this project, text about this project, text about this project",
         },
         {
