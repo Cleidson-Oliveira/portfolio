@@ -1,10 +1,15 @@
 import style from "./style.module.scss";
 
+import { FiRadio } from "react-icons/fi";
+import { GoRepo } from "react-icons/go";
+
 interface FaceCardProps {
     projectData: {
         name: string, 
         image: string, 
         description: string,
+        liveProjectUrl: string,
+        repoprojectUrl: string,
     }
 }
 
@@ -15,9 +20,15 @@ export function FaceCard ({ projectData }: FaceCardProps) {
                 { projectData.name }
             </h1>
             <div>
-                <div>
-                    <a>Live</a>
-                    <a>Repo</a>
+                <div className={style.projectLinks}>
+                    <a target="_blank" href={projectData.liveProjectUrl}>
+                        <FiRadio />
+                        Live Project
+                    </a>
+                    <a target="_blank" href={projectData.repoprojectUrl}>
+                        <GoRepo />
+                        Repository
+                    </a>
                 </div>
                 <div>
                     <img src={projectData.image} alt={ projectData.name } />

@@ -7,6 +7,8 @@ interface ProjectData {
     name: string,
     image: string,
     description: string,
+    liveProjectUrl: string,
+    repoprojectUrl: string,
 }
 
 export const ProjectsSession = () => {
@@ -16,21 +18,29 @@ export const ProjectsSession = () => {
             name: "Ângela Reys Fotografia",
             image: "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/projectThumbs/angelareysfotografia.png",
             description: "Text about this project, text about this project, text about this project, text about this project, text about this project, text about this project",
+            liveProjectUrl: "https://angela-reys-fotografia.vercel.app/",
+            repoprojectUrl: "https://github.com/Cleidson-Oliveira/Angela-Reys-Fotografia",
         },
         {
             name: "5Ws",
-            image: "Project image",
+            image: "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/projectThumbs/5Ws.jpg",
             description: "Text about this project, text about this project, text about this project, text about this project, text about this project, text about this project",
+            liveProjectUrl: "https://5-ws.vercel.app/",
+            repoprojectUrl: "https://github.com/Cleidson-Oliveira/5Ws",
         },
         {
             name: "Yu-Gi-Tools",
-            image: "Project image",
+            image: "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/projectThumbs/angelareysfotografia.png",
             description: "Text about this project, text about this project, text about this project, text about this project, text about this project, text about this project",
+            liveProjectUrl: "https://yu-gi-tools.herokuapp.com/",
+            repoprojectUrl: "https://github.com/Cleidson-Oliveira/YuGiTools",
         },
         {
             name: "Em breve",
-            image: "Project image",
+            image: "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/projectThumbs/angelareysfotografia.png",
             description: "Text about this project, text about this project, text about this project, text about this project, text about this project, text about this project",
+            liveProjectUrl: "",
+            repoprojectUrl: "",
         },
     ]
 

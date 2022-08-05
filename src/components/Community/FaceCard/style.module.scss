@@ -21,10 +21,6 @@
         width: 100%;
         height: 50%;
     
-        & > div:first-child {
-            width: 28%;
-            height: 100%;
-        }
         & > div:last-child {
             display: flex;
             justify-content: center;
@@ -48,5 +44,33 @@
 
     &:last-child {
         transform: rotateY(180deg);
+    }
+}
+
+.projectLinks {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 28%;
+    height: 100%;
+
+    a {
+        background-color: var(--grey-light);
+        box-sizing: border-box;
+        padding: 0.5rem;
+        border: var(--grey-middle) 2px solid;
+        border-radius: 0.3rem;
+        transition: color 0.3s ease, background-color 0.3s ease;
+        color: var(--grey-dark);
+        font-weight: bold;
+        display: inline-flex;
+        gap: .5rem;
+        text-decoration: none;
+        font-size: .9rem;
+
+        &:hover {
+            background-color: var(--grey-middle);
+            color: var(--grey-light);
+        }
     }
 }

@@ -12,7 +12,7 @@
     flex-direction: column;
     align-items: center;
     border-radius: .4rem;
-    gap: 1rem;
+    gap: .8rem;
     overflow: hidden;
     cursor: grab;
 
@@ -41,7 +41,7 @@
     flex-direction: column;
     align-items: center;
     position: absolute;
-    bottom: 4.5rem;
+    bottom: 4rem;
 
     div {
         display: flex;
@@ -60,7 +60,7 @@
     flex-direction: row;
     gap: 1rem;
     position: absolute;
-    bottom: 2rem;
+    bottom: 1.7rem;
 }
 
 .link {
