@@ -15,7 +15,13 @@ export function FaceCard ({ projectData }: FaceCardProps) {
                 { projectData.name }
             </h1>
             <div>
-                { projectData.image }
+                <div>
+                    <a>Live</a>
+                    <a>Repo</a>
+                </div>
+                <div>
+                    <img src={projectData.image} alt={ projectData.name } />
+                </div>
             </div>
             <span>
                 { projectData.description }
