@@ -40,6 +40,13 @@
     span {
         font-size: 1.2rem;
         color: var(--grey-light);
+
+        &:last-child {
+            display: flex;
+            gap: 1rem;
+            position: absolute;
+            bottom: 1.5rem;
+        }
     }
 
     &:last-child {

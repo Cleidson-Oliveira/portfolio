@@ -10,6 +10,7 @@ interface FaceCardProps {
         description: string,
         liveProjectUrl: string,
         repoprojectUrl: string,
+        techStack: string[],
     }
 }
 
@@ -36,6 +37,11 @@ export function FaceCard ({ projectData }: FaceCardProps) {
             </div>
             <span>
                 { projectData.description }
+            </span>
+            <span>
+                {projectData.techStack.map(item => (
+                    <p>{item}</p>
+                ))}
             </span>
         </div>
     )
