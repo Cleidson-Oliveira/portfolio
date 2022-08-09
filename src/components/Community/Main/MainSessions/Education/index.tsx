@@ -7,7 +7,7 @@ import { DiCss3, DiBootstrap } from 'react-icons/di';
 import { GrMysql } from 'react-icons/gr';
 import { IoLogoJavascript, IoLogoSass, IoLogoNodejs } from 'react-icons/io';
 import { TbBrandReactNative } from 'react-icons/tb';
-import { SiNextdotjs } from 'react-icons/si';
+import { SiNextdotjs, SiTypescript } from 'react-icons/si';
 
 import style from "./style.module.scss";
 
@@ -15,7 +15,7 @@ import "swiper/css";
 import "swiper/css/a11y";
 import "swiper/css/pagination";
 
-type SkillsType = "html" | "css" | "javascript" | "sass" | "sql" | "php" | "bootstrap" | "react" | "next" | "node" | "reactnative"
+type SkillsType = "html" | "css" | "javascript" | "typescript" | "sass" | "sql" | "php" | "bootstrap" | "react" | "next" | "node" | "reactnative"
 
 interface EducationDataType {
     courseName: string,
@@ -31,8 +31,17 @@ export const EducationSession = () => {
 
     const EducationData: EducationDataType[] = [
         {
+            courseName: "Ignite",
+            courseThumbnailUrl: "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/coursesThumbs/ignite.png",
+            courseDescription: "Neste treinamento é encontrado o conteúdo mais atualizado e alinhado com o mercado envolvendo desenvolvimento Mobile, Front & Back-end com a stack Javascript e todo o ambiente que rodeia estas tecnologias.",
+            courseSkillsLearned: [ "react", "next", "node", "reactnative", "typescript" ],
+            courseCertificateUrl: "",
+            courseRepositorieUrl: "https://img-b.udemycdn.com/course/240x135/1616938_8f0b_2.jpg",
+            courseIsOver: false,
+        },
+        {
             courseName: "Web Design",
-            courseThumbnailUrl: "https://img-b.udemycdn.com/course/240x135/1616938_8f0b_2.jpg",
+            courseThumbnailUrl: "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/coursesThumbs/web_design.jpg",
             courseDescription: "Neste curso iniciei o aprendizado no desenvolvimento wed, aprendendo aspectos importantes das 3 linguagens básicas do front-end bem como alguns conceitos de SEO e responsividade.",
             courseSkillsLearned: [ "html", "css", "javascript" ],
             courseCertificateUrl: "https://drive.google.com/file/d/1Yg5XFL1_A1bUpIonoTPFp0JjMGNkENle/view?usp=sharing",
@@ -41,22 +50,13 @@ export const EducationSession = () => {
         },
         {
             courseName: "Desenvolvimento Web",
-            courseThumbnailUrl: "https://img-b.udemycdn.com/course/240x135/1341268_c20e_3.jpg",
+            courseThumbnailUrl: "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/coursesThumbs/desenvolvimento_web.jpg",
             courseDescription: "(Em andamento) Neste curso estou aprendendo coisas novas sobre HTML, CSS e JS, além de ter o primeiro contato com SASS, Bootstrap, PHP e SQL.",
             courseSkillsLearned: [ "bootstrap", "sass", "php", "sql" ],
             courseCertificateUrl: "https://drive.google.com/file/d/1cpeEEp2s1RjUxc-DYaP_okREfYegQv6X/view?usp=sharing",
             courseRepositorieUrl: "https://github.com/Cleidson-Oliveira/curso-desenvolvimento-web",
             courseIsOver: false,
-        },
-        {
-            courseName: "Ignite",
-            courseThumbnailUrl: "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/coursesThumbs/ignigt.png",
-            courseDescription: "Neste curso iniciei o aprendixado no desenvolvimento wed, aprendendo aspectos importantes das 3 línguagens básicas do front-end bem como alguns conceitos de SEO e responsividade.",
-            courseSkillsLearned: [ "react", "next", "node", "reactnative", ],
-            courseCertificateUrl: "https://drive.google.com/file/d/1Yg5XFL1_A1bUpIonoTPFp0JjMGNkENle/view?usp=sharing",
-            courseRepositorieUrl: "https://img-b.udemycdn.com/course/240x135/1616938_8f0b_2.jpg",
-            courseIsOver: true,
-        },       
+        },     
     ]
 
     const skillIcons = {
@@ -71,6 +71,7 @@ export const EducationSession = () => {
         "next": () => <SiNextdotjs />,
         "node": () => <IoLogoNodejs />,
         "reactnative": () => <TbBrandReactNative />,
+        "typescript": () => <SiTypescript />,
     }
 
     return (
