@@ -2,10 +2,12 @@ import { A11y, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { AiFillHtml5 } from 'react-icons/ai';
-import { FaPhp } from 'react-icons/fa';
+import { FaPhp, FaReact } from 'react-icons/fa';
 import { DiCss3, DiBootstrap } from 'react-icons/di';
 import { GrMysql } from 'react-icons/gr';
-import { IoLogoJavascript, IoLogoSass } from 'react-icons/io';
+import { IoLogoJavascript, IoLogoSass, IoLogoNodejs } from 'react-icons/io';
+import { TbBrandReactNative } from 'react-icons/tb';
+import { SiNextdotjs } from 'react-icons/si';
 
 import style from "./style.module.scss";
 
@@ -13,7 +15,7 @@ import "swiper/css";
 import "swiper/css/a11y";
 import "swiper/css/pagination";
 
-type SkillsType = "html" | "css" | "javascript" | "sass" | "sql" | "php" | "bootstrap"
+type SkillsType = "html" | "css" | "javascript" | "sass" | "sql" | "php" | "bootstrap" | "react" | "next" | "node" | "reactnative"
 
 interface EducationDataType {
     courseName: string,
@@ -47,23 +49,14 @@ export const EducationSession = () => {
             courseIsOver: false,
         },
         {
-            courseName: "Web Design",
-            courseThumbnailUrl: "https://img-b.udemycdn.com/course/240x135/1616938_8f0b_2.jpg",
+            courseName: "Ignite",
+            courseThumbnailUrl: "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/coursesThumbs/ignigt.png",
             courseDescription: "Neste curso iniciei o aprendixado no desenvolvimento wed, aprendendo aspectos importantes das 3 línguagens básicas do front-end bem como alguns conceitos de SEO e responsividade.",
-            courseSkillsLearned: [ "html", "css", "javascript" ],
+            courseSkillsLearned: [ "react", "next", "node", "reactnative", ],
             courseCertificateUrl: "https://drive.google.com/file/d/1Yg5XFL1_A1bUpIonoTPFp0JjMGNkENle/view?usp=sharing",
             courseRepositorieUrl: "https://img-b.udemycdn.com/course/240x135/1616938_8f0b_2.jpg",
             courseIsOver: true,
-        },
-        {
-            courseName: "Desenvolvimento Web",
-            courseThumbnailUrl: "https://img-b.udemycdn.com/course/240x135/1341268_c20e_3.jpg",
-            courseDescription: "(Em andamento) Neste curso estou aprendendo coisas novas sobre HTML, CSS e JS, além de ter o primeiro contato com SASS, Bootstrap, PHP e SQL.",
-            courseSkillsLearned: [ "bootstrap", "sass", "php", "sql" ],
-            courseCertificateUrl: "https://drive.google.com/file/d/1cpeEEp2s1RjUxc-DYaP_okREfYegQv6X/view?usp=sharing",
-            courseRepositorieUrl: "https://img-b.udemycdn.com/course/240x135/1616938_8f0b_2.jpg",
-            courseIsOver: false,
-        },        
+        },       
     ]
 
     const skillIcons = {
@@ -74,6 +67,10 @@ export const EducationSession = () => {
         "sql": () => <GrMysql />,
         "php": () => <FaPhp />,
         "bootstrap": () => <DiBootstrap />,
+        "react": () => <FaReact />,
+        "next": () => <SiNextdotjs />,
+        "node": () => <IoLogoNodejs />,
+        "reactnative": () => <TbBrandReactNative />,
     }
 
     return (
