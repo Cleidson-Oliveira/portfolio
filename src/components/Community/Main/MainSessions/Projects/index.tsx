@@ -18,10 +18,10 @@ export const ProjectsSession = () => {
         {
             name: "Ângela Reys Fotografia",
             image: "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/projectThumbs/angelareysfotografia.png",
-            description: "Este projeto é um website que apresenta o trabalho de uma fotografa. Uma rest API que expõe a localização das fotos apresentadas na galeria. Na página de contato é possível enviar um e-mail para a fotografa.",
+            description: "Este projeto é um website que apresenta o trabalho de uma fotografa. Uma restAPI expõe a localização das fotos apresentadas na galeria. Na página de contato é possível enviar um e-mail para a fotografa.",
             liveProjectUrl: "https://angela-reys-fotografia.vercel.app/",
             repoprojectUrl: "https://github.com/Cleidson-Oliveira/Angela-Reys-Fotografia",
-            techStack: ["React", "Next"],
+            techStack: ["NextJs", "Styled-components", "Mongodb", "Vercel"],
         },
         {
             name: "5Ws",
@@ -29,7 +29,7 @@ export const ProjectsSession = () => {
             description: "Através desta aplicação o usuário pode descrever imagens do cotidiano aplicando o método 5Ws para melhorar o vocabulário em outro idioma.",
             liveProjectUrl: "https://5-ws.vercel.app/",
             repoprojectUrl: "https://github.com/Cleidson-Oliveira/5Ws",
-            techStack: ["React", "Next"],
+            techStack: ["NextJs", "Styled-components", "FaunaDb", "Vercel"],
         },
         {
             name: "Yu-Gi-Tools",
@@ -37,7 +37,7 @@ export const ProjectsSession = () => {
             description: "Esta aplicação tem por intuito agregar ferramentas úteis para jogadores do cardgame Yu-Gi-Oh!. Além de acessar os cards e verificar suas características, é possível calcular as probabilidades envolvidas no deck build.",
             liveProjectUrl: "https://yu-gi-tools.herokuapp.com/",
             repoprojectUrl: "https://github.com/Cleidson-Oliveira/YuGiTools",
-            techStack: ["React"],
+            techStack: ["React", "Heroku"],
         },
         {
             name: "Em breve",
