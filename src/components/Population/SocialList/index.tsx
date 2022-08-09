@@ -1,23 +1,15 @@
-import { AiOutlineGithub } from "react-icons/ai";
-import { FaLinkedin } from "react-icons/fa";
+import { ReactNode } from "react";
 
 import style from "./style.module.scss";
 
-export default function SocialList () {
+interface SocialListProps {
+    children: ReactNode
+}
+
+export default function SocialList ({ children }: SocialListProps) {
     return (
         <div className={style.socialList}>
-            <a 
-                className={style.socialIcom}
-                href="https://www.linkedin.com/in/cleidson-oliveira-963ba7230/"
-            >
-                <FaLinkedin />
-            </a>
-            <a 
-                className={style.socialIcom}
-                href="https://github.com/Cleidson-Oliveira"
-            >
-                <AiOutlineGithub />
-            </a>
+            { children }
         </div>
     )
 }
