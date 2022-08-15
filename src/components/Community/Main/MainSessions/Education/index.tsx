@@ -40,15 +40,6 @@ export const EducationSession = () => {
             courseIsOver: false,
         },
         {
-            courseName: "Web Design",
-            courseThumbnailUrl: "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/coursesThumbs/web_design.jpg",
-            courseDescription: "Neste curso iniciei o aprendizado no desenvolvimento wed, aprendendo aspectos importantes das 3 linguagens básicas do front-end bem como alguns conceitos de SEO e responsividade.",
-            courseSkillsLearned: [ "html", "css", "javascript" ],
-            courseCertificateUrl: "https://drive.google.com/file/d/1Yg5XFL1_A1bUpIonoTPFp0JjMGNkENle/view?usp=sharing",
-            courseRepositorieUrl: "https://github.com/Cleidson-Oliveira/curso-web-design",
-            courseIsOver: true,
-        },
-        {
             courseName: "Desenvolvimento Web",
             courseThumbnailUrl: "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/coursesThumbs/desenvolvimento_web.jpg",
             courseDescription: "(Em andamento) Neste curso estou aprendendo coisas novas sobre HTML, CSS e JS, além de ter o primeiro contato com SASS, Bootstrap, PHP e SQL.",
@@ -57,6 +48,15 @@ export const EducationSession = () => {
             courseRepositorieUrl: "https://github.com/Cleidson-Oliveira/curso-desenvolvimento-web",
             courseIsOver: false,
         },     
+        {
+            courseName: "Web Design",
+            courseThumbnailUrl: "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/coursesThumbs/web_design.jpg",
+            courseDescription: "Neste curso iniciei o aprendizado no desenvolvimento wed, aprendendo aspectos importantes das 3 linguagens básicas do front-end bem como alguns conceitos de SEO e responsividade.",
+            courseSkillsLearned: [ "html", "css", "javascript" ],
+            courseCertificateUrl: "https://drive.google.com/file/d/1Yg5XFL1_A1bUpIonoTPFp0JjMGNkENle/view?usp=sharing",
+            courseRepositorieUrl: "https://github.com/Cleidson-Oliveira/curso-web-design",
+            courseIsOver: true,
+        },
     ]
 
     const skillIcons = {

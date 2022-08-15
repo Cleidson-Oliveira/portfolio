@@ -40,7 +40,7 @@ export function FaceCard ({ projectData }: FaceCardProps) {
             </span>
             <span>
                 {projectData.techStack.map(item => (
-                    <p>{item}</p>
+                    <p key={ item }>{ item }</p>
                 ))}
             </span>
         </div>

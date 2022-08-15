@@ -33,7 +33,7 @@ export const ProjectsSession = () => {
         },
         {
             name: "Yu-Gi-Tools",
-            image: "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/projectThumbs/angelareysfotografia.png",
+            image: "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/projectThumbs/yu-gi-tools.png",
             description: "Esta aplicação tem por intuito agregar ferramentas úteis para jogadores do cardgame Yu-Gi-Oh!. Além de acessar os cards e verificar suas características, é possível calcular as probabilidades envolvidas no deck build.",
             liveProjectUrl: "https://yu-gi-tools.herokuapp.com/",
             repoprojectUrl: "https://github.com/Cleidson-Oliveira/YuGiTools",
