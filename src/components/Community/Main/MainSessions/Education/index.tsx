@@ -80,9 +80,7 @@ export const EducationSession = () => {
                 modules={[A11y, Pagination]}
                 spaceBetween={20}
                 slidesPerView={2.5}
-                pagination={{ type: 'bullets', }}
-                onSwiper={(swiper) => console.log(swiper)}
-                onSlideChange={() => console.log('slide change')}
+                pagination={{ type: 'bullets' }}
             >
                 {EducationData.map((course, i) => (
                     <SwiperSlide key={course.courseThumbnailUrl + i}>
@@ -94,7 +92,7 @@ export const EducationSession = () => {
                                 <p>Skills</p>
                                 <div>
                                     {course.courseSkillsLearned.map(skill => (
-                                        skillIcons[skill]()
+                                        <div key={skill}>{ skillIcons[skill]() }</div>
                                     ))}
                                 </div>
                             </div>
