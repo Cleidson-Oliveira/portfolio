@@ -20,20 +20,22 @@ export default function Navigation () {
             </Button>
 
             <Button onClick={() => {handleFocus(1)}}>
+                <FaUser />
+            </Button>
+
+            <Button onClick={() => {handleFocus(2)}}>
                 <MdWork />
             </Button>
             
-            <Button onClick={() => {handleFocus(2)}}>
+            <Button onClick={() => {handleFocus(3)}}>
                 <AiFillSafetyCertificate />
             </Button>
             
-            <Button onClick={() => {handleFocus(3)}}>
+            <Button onClick={() => {handleFocus(4)}}>
                 <AiFillPhone />
             </Button>
             
-            <Button onClick={() => {handleFocus(4)}}>
-                <FaUser />
-            </Button>
+
         </nav>
     )
 }

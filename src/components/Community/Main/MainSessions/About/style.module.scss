@@ -1,0 +1,17 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 2rem 3rem 4rem;
+    text-align: right;
+
+    h2 {
+        color: var(--grey-light);
+        margin-bottom: 1rem;
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+    }
+}

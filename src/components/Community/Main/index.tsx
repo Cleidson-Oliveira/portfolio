@@ -1,3 +1,4 @@
+import AboutMe from "./MainSessions/About";
 import { Contact } from "./MainSessions/Contact";
 import { EducationSession } from "./MainSessions/Education";
 import { HomeSession } from "./MainSessions/Home";
@@ -18,6 +19,13 @@ export default function Main () {
             </section>
 
             <section className={style.card}>
+                <h1 className={style.title} id="teste">
+                    About me
+                </h1>
+                <AboutMe />
+            </section>
+
+            <section className={style.card}>
                 <h1 className={style.title}>
                     Projects
                 </h1>
@@ -31,18 +39,13 @@ export default function Main () {
                 <EducationSession />
             </section>
             
-             
             <section className={style.card}>
                 <h1 className={style.title}>
                     Contact
                 </h1>
                 <Contact />
             </section>
-            <section className={style.card}>
-                <h1 className={style.title} id="teste">
-                    About me
-                </h1>
-            </section>
+
         </main>
     )
 }

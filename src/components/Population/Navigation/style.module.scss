@@ -16,15 +16,16 @@
         content: "Home";
     }
     button:nth-child(2):hover::after {
-        content: "Projects";
+        content: "Aboutme";
     }
     button:nth-child(3):hover::after {
-        content: "Education";
+        content: "Projects";
     }
     button:nth-child(4):hover::after {
-        content: "Contact";
+        content: "Education";
     }
     button:nth-child(5):hover::after {
-        content: "About me";
+        content: "Contact";
     }
+
 }
