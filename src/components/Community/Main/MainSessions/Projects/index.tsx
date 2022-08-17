@@ -52,7 +52,7 @@ export const ProjectsSession = () => {
     const [flip, setFlip] = useState(false)
     const [firstFaceCard, setFirstFaceCard] = useState<ProjectData>(projectsData[0])
     const [secondFaceCard, setSecondFaceCard] = useState<ProjectData>(projectsData[1])
-    const [buttonActive, setButtonActive] = useState(projectsData[1].name)
+    const [buttonActive, setButtonActive] = useState(projectsData[0].name)
 
     const cardFace = useRef<'face1' | 'face2'>('face1');
 
