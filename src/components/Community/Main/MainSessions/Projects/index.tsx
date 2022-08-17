@@ -33,7 +33,7 @@ export const ProjectsSession = () => {
         },
         {
             name: "Yu-Gi-Tools",
-            image: "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/projectThumbs/pokebag.png",
+            image: "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/projectThumbs/yu-gi-tools.png",
             description: "Esta aplicação tem por intuito agregar ferramentas úteis para jogadores do cardgame Yu-Gi-Oh!. Além de acessar os cards e verificar suas características, é possível calcular as probabilidades envolvidas no deck build.",
             liveProjectUrl: "https://yu-gi-tools.herokuapp.com/",
             repoprojectUrl: "https://github.com/Cleidson-Oliveira/YuGiTools",
@@ -41,7 +41,7 @@ export const ProjectsSession = () => {
         },
         {
             name: "Pokebag",
-            image: "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/projectThumbs/yu-gi-tools.png",
+            image: "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/projectThumbs/pokebag.png",
             description: "Este foi um dos primeiros projetos que criei para treino. É um utilitário de pokémon que acessa a pokeAPI para pegar informações dos pokémons. Além disso, simula batalhas usando estes dados e favorita equipes de pokémons.",
             liveProjectUrl: "",
             repoprojectUrl: "https://github.com/Cleidson-Oliveira/Pokebag",
