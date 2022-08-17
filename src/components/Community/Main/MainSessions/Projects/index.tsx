@@ -52,11 +52,16 @@ export const ProjectsSession = () => {
     const [flip, setFlip] = useState(false)
     const [firstFaceCard, setFirstFaceCard] = useState<ProjectData>(projectsData[0])
     const [secondFaceCard, setSecondFaceCard] = useState<ProjectData>(projectsData[1])
+    const [buttonActive, setButtonActive] = useState(projectsData[1].name)
 
     const cardFace = useRef<'face1' | 'face2'>('face1');
 
     const handleFlipState = () => {
-        setFlip(prevState => !prevState)   
+        setFlip(prevState => !prevState);
+    }
+
+    const handleButtonActive = (name: string) => {
+        setButtonActive(name);
     }
     
     const changeFaceCardData = (nameParam: string) => {
@@ -64,7 +69,7 @@ export const ProjectsSession = () => {
 
         projectsData.forEach((projectData) => {
             if (projectData.name == nameParam) {
-                data = projectData
+                data = projectData;
             }
         })
 
@@ -86,6 +91,7 @@ export const ProjectsSession = () => {
 
         changeFaceCardData(name);
         handleFlipState();
+        handleButtonActive(name);
     }
 
     return (
@@ -93,6 +99,7 @@ export const ProjectsSession = () => {
             <nav className={style.menuProjects}>
                 {projectsData.map(({name})=>(
                     <button
+                        className={buttonActive == name ? style.active : ''}
                         key={name}
                         onClick={() => {flipCard(name)}}
                     >

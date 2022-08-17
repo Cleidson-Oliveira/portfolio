@@ -31,6 +31,15 @@
             background-color: var(--grey-middle);
             color: var(--grey-light);
         }
+
+        &.active {
+            background-color: var(--grey-middle);
+            color: var(--grey-light);
+            
+            &:hover {
+                background-color: var(--blue-dark);
+            }
+        }
     }
 }
 
