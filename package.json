@@ -12,6 +12,7 @@
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-icons": "^4.4.0",
+    "react-responsive": "^9.0.0-beta.10",
     "react-toastify": "^9.0.8",
     "sass": "^1.53.0",
     "swiper": "^8.3.2"

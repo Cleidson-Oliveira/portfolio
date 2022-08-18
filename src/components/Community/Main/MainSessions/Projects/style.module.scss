@@ -45,6 +45,7 @@
 
 .cardProject {
     width: 65%;
+    min-width: 520px;
     height: 100%;
     display: flex;
     position: relative;
@@ -53,6 +54,7 @@
 }
 
 .cardProjectFlip {
+    min-width: 520px;
     width: 65%;
     height: 100%;
     display: flex;
@@ -60,4 +62,42 @@
     transform-style: preserve-3d;
     transition: ease .7s all;
     transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 768px) {
+    .projectsContent {
+        flex-direction: column;
+        align-items: center;
+
+        & > nav {
+            flex-direction: row;
+            width: 100%;
+        }
+        & > div {
+            width: 100%;
+        }
+    }
+    .menuProjects {
+        flex-wrap: wrap;
+
+        button {
+            font-size: 1.4rem;
+            padding: .7rem;
+        }
+    }
+    .cardProject, .cardProjectFlip {
+        height: 80%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .menuProjects {
+        button {
+            font-size: 1rem;
+        }
+    }
+    .cardProject, .cardProjectFlip {
+        min-width: unset;
+        height: 75%;
+    }
 }

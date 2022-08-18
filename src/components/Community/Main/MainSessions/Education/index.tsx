@@ -1,5 +1,6 @@
 import { A11y, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useMediaQuery } from 'react-responsive';
 
 import { AiFillHtml5 } from 'react-icons/ai';
 import { FaPhp, FaReact } from 'react-icons/fa';
@@ -14,6 +15,7 @@ import style from "./style.module.scss";
 import "swiper/css";
 import "swiper/css/a11y";
 import "swiper/css/pagination";
+import { useEffect, useState } from 'react';
 
 type SkillsType = "html" | "css" | "javascript" | "typescript" | "sass" | "sql" | "php" | "bootstrap" | "react" | "next" | "node" | "reactnative"
 
@@ -28,6 +30,37 @@ interface EducationDataType {
 }
 
 export const EducationSession = () => {
+    const [slidesPerView, setSlidesPerView] = useState(2.5)
+
+    const smallScreen = useMediaQuery({ query: '(max-width: 599px)' });
+    const mobileScreen = useMediaQuery({ query: '(min-width: 600px) and (max-width: 767px)' });
+    const tabletScreen = useMediaQuery({ query: '(min-width: 768px) and (max-width: 991px)' });
+    const laptopScreen = useMediaQuery({ query: '(min-width: 992px) and (max-width: 1200px)' });
+    const largeScreen = useMediaQuery({ query: '(min-width: 1201px)' });
+
+    useEffect(() => {
+        if (smallScreen) {
+            setSlidesPerView(1)
+        }
+        if (mobileScreen) {
+            setSlidesPerView(1.3)
+        }
+        if (tabletScreen) {
+            setSlidesPerView(1.6)
+        }
+        if (laptopScreen) {
+            setSlidesPerView(1.9)
+        }
+        if (largeScreen) {
+            setSlidesPerView(2.3)
+        }
+    }, [
+        smallScreen,
+        mobileScreen,
+        tabletScreen,
+        laptopScreen,
+        largeScreen,
+    ])
 
     const EducationData: EducationDataType[] = [
         {
@@ -79,7 +112,7 @@ export const EducationSession = () => {
             <Swiper
                 modules={[A11y, Pagination]}
                 spaceBetween={20}
-                slidesPerView={2.5}
+                slidesPerView={slidesPerView}
                 pagination={{ type: 'bullets' }}
             >
                 {EducationData.map((course, i) => (

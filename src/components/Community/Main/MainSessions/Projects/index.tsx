@@ -98,8 +98,8 @@ export const ProjectsSession = () => {
         }
 
         changeFaceCardData(name);
-        handleFlipState();
         handleButtonActive(name);
+        handleFlipState();
     }
 
     return (

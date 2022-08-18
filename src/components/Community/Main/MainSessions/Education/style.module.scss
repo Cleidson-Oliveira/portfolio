@@ -28,7 +28,7 @@
     p {
         width: 90%;
         text-align: center;
-        color: var(--grey-light);
+        color: var(--blue-light);
     }
 
     &:active {
@@ -64,7 +64,7 @@
 }
 
 .link {
-    width: 80px;
+    min-width: 80px;
     padding: 0.3rem .8rem;
     border-radius: .2rem;
     text-decoration: none;
@@ -81,14 +81,42 @@
 }
 
 .inactiveLink {
-    width: 80px;
+    min-width: 80px;
     padding: 0.3rem .8rem;
     border-radius: .2rem;
     text-decoration: none;
     background: var(--grey-light);
-    color: var(--grey-middle);
+    color: var(--blue-light);
     transition: background-color .3s ease, color .5s ease;
     border: var(--grey-light) 2px solid;
     text-align: center;
     cursor: not-allowed;
+}
+
+@media screen and (max-width: 992px) {
+    .skillAndEducationContent {
+        width: 100%;
+    } 
+}   
+@media screen and (max-width: 768px) { 
+    .educationCard {
+        img {
+            height: 215px;
+        }
+        h2 {
+            font-size: 2rem;
+            line-height: 4rem;
+        }
+        p {
+            font-size: 1.7rem;
+        }
+    }
+    .skillLearned {
+        bottom: 5rem;
+    }
+    .link, .inactiveLink {
+        font-size: 1.5rem;
+        box-sizing: content-box;
+        padding: 0.3rem 1rem;
+    }
 }

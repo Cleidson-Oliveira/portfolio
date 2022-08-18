@@ -20,3 +20,32 @@
     color: var(--grey-light);
     text-shadow: 4px 4px 6px black;
 }
+
+@media screen and ( max-width: 992px) {
+    .wrapper {
+        width: 100%;
+    }
+    .card {
+        align-items: center;
+    }
+    .title {
+        align-self: flex-end;
+    }
+}
+
+@media screen and ( max-width: 768px) {
+    .card {
+        padding: 3rem 2rem;
+    }
+    .title {
+        font-size: 2rem;
+    }
+}
+@media screen and ( max-width: 600px) {
+    .card {
+        padding: 3rem 1rem;
+    }
+    .title {
+        height: 10%;
+    }
+}
