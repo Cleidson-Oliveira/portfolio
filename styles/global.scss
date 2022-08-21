@@ -6,6 +6,8 @@
     --grey-dark: #303044;
 
     --jump: jump 1.3s ease infinite;
+
+    font-size: 16px;
 }
 
 * {
@@ -60,3 +62,9 @@ button {
         transform: translateY(0);
     }
 };
+
+@media screen and ( max-width: 600px) {
+    :root {
+        font-size: .8rem;
+    }
+}
