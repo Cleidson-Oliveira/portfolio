@@ -50,7 +50,7 @@ export const ProjectsSession = () => {
         {
             name: "Weather App",
             image: "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/projectThumbs/weatherapp.png",
-            description: "Aplicação consome uma API de clima-tempo e retorna dados sobre o temperatura e condições climáticas. Contruída com base em um desáfio do repositório 'frontend-challenges' do usuário felipefialho",
+            description: "Aplicação consome uma API de clima-tempo e retorna dados sobre o temperatura e condições climáticas. Contruída com base em um desafio do repositório 'frontend-challenges' do usuário felipefialho.",
             liveProjectUrl: "",
             repoprojectUrl: "https://github.com/Cleidson-Oliveira/weather-app",
             techStack: ["React"],

@@ -61,6 +61,22 @@
     width: 28%;
     height: 100%;
 
+    span {
+        box-sizing: border-box;
+        padding: 0.5rem;
+        border-radius: 0.3rem;
+        transition: color 0.3s ease, background-color 0.3s ease;
+        font-weight: bold;
+        display: inline-flex;
+        gap: .5rem;
+        text-decoration: none;
+        font-size: .9rem;
+        background-color: var(--grey-middle);
+        color: var(--grey-light);
+        border: var(--grey-middle) 2px solid;
+        cursor: not-allowed;
+    }
+
     a {
         background-color: var(--grey-light);
         box-sizing: border-box;

@@ -22,10 +22,18 @@ export function FaceCard ({ projectData }: FaceCardProps) {
             </h1>
             <div>
                 <div className={style.projectLinks}>
-                    <a target="_blank" href={projectData.liveProjectUrl}>
-                        <FiRadio />
-                        Live Project
-                    </a>
+                    {
+                        projectData.liveProjectUrl === ''
+                        ? <span>
+                            <FiRadio />
+                            Live Project
+                        </span>
+                        : <a target="_blank" href={projectData.liveProjectUrl}>
+                            <FiRadio />
+                            Live Project
+                        </a>
+                    }
+
                     <a target="_blank" href={projectData.repoprojectUrl}>
                         <GoRepo />
                         Repository
