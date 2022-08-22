@@ -43,9 +43,17 @@ export const ProjectsSession = () => {
             name: "Pokebag",
             image: "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/projectThumbs/pokebag.png",
             description: "Este foi um dos primeiros projetos que criei para treino. É um utilitário de pokémon que acessa a pokeAPI para pegar informações dos pokémons. Além disso, simula batalhas usando estes dados e favorita equipes de pokémons.",
-            liveProjectUrl: "",
+            liveProjectUrl: "https://cleidson-oliveira.github.io/Pokebag/",
             repoprojectUrl: "https://github.com/Cleidson-Oliveira/Pokebag",
             techStack: ["HTML", "CSS", "Javascript"],
+        },
+        {
+            name: "Weather App",
+            image: "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/projectThumbs/weatherapp.png",
+            description: "Aplicação consome uma API de clima-tempo e retorna dados sobre o temperatura e condições climáticas. Contruída com base em um desáfio do repositório 'frontend-challenges' do usuário felipefialho",
+            liveProjectUrl: "",
+            repoprojectUrl: "https://github.com/Cleidson-Oliveira/weather-app",
+            techStack: ["React"],
         },
         {
             name: "Em breve",
