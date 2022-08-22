@@ -73,7 +73,7 @@
         font-size: .9rem;
         background-color: var(--grey-middle);
         color: var(--grey-light);
-        border: var(--grey-middle) 2px solid;
+        border: var(--grey-dark) 2px solid;
         cursor: not-allowed;
     }
 
@@ -112,7 +112,7 @@
         }
     }
     .projectLinks {
-        a {
+        a, span {
             font-size: 1.4rem;
         }
     }
@@ -154,11 +154,10 @@
     .projectLinks {
         flex-direction: row;
         justify-content: center;
-        gap: 0;
         height: auto;
         width: auto;
 
-        a {
+        a, span {
             font-size: 1rem;
         }
     }
