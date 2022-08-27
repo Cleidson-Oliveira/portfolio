@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaceCard } from "../../../FaceCard";
 
 import style from "./style.module.scss";
@@ -69,8 +69,7 @@ export const ProjectsSession = () => {
     const [firstFaceCard, setFirstFaceCard] = useState<ProjectData>(projectsData[0])
     const [secondFaceCard, setSecondFaceCard] = useState<ProjectData>(projectsData[1])
     const [buttonActive, setButtonActive] = useState(projectsData[0].name)
-
-    const cardFace = useRef<'face1' | 'face2'>('face1');
+    const [cardFace, setCardFace] = useState<'face1' | 'face2'>('face1');
 
     const handleFlipState = () => {
         setFlip(prevState => !prevState);
@@ -89,26 +88,30 @@ export const ProjectsSession = () => {
             }
         })
 
-        cardFace.current = cardFace.current == "face1" ? "face2" : "face1";
-        cardFace.current == "face1"
+        setCardFace(prevState => prevState === "face1" ? "face2" : "face1")
+
+        cardFace == "face1"
         ? setFirstFaceCard(data!)
         : setSecondFaceCard(data!)
     }
 
     const flipCard = (name: string) => {
 
-        if ( cardFace.current == "face1" && name == firstFaceCard.name ) {
+        if ( cardFace == "face1" && name == firstFaceCard.name ) {
             return;
         }
 
-        if ( cardFace.current == "face2" && name == secondFaceCard.name ) {
+        if ( cardFace == "face2" && name == secondFaceCard.name ) {
             return;
         }
 
         changeFaceCardData(name);
         handleButtonActive(name);
-        handleFlipState();
     }
+    
+    useEffect(() => {
+        handleFlipState();
+    }, [ firstFaceCard, secondFaceCard ])
 
     return (
         <div className={style.projectsContent}>
@@ -129,4 +132,4 @@ export const ProjectsSession = () => {
             </div>
         </div>
     )
-}
+} 
