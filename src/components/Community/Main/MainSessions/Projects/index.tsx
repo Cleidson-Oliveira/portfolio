@@ -90,9 +90,8 @@ export const ProjectsSession = () => {
         })
 
         cardFace.current = cardFace.current == "face1" ? "face2" : "face1";
-        cardFace.current == "face1"
-        ? setFirstFaceCard(data!)
-        : setSecondFaceCard(data!)
+        
+        cardFace.current == "face1" ? setFirstFaceCard(data!) : setSecondFaceCard(data!)
     }
 
     const flipCard = (name: string) => {
