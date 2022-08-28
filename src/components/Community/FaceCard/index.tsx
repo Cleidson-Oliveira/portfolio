@@ -40,7 +40,11 @@ export function FaceCard ({ projectData }: FaceCardProps) {
                     </a>
                 </div>
                 <div>
-                    <img src={projectData.image} alt={ projectData.name } />
+                    {
+                        projectData.image === "" 
+                        ? <div>loading...</div> 
+                        : <img src={projectData.image} alt={ projectData.name } />
+                    }
                 </div>
             </div>
             <span>
