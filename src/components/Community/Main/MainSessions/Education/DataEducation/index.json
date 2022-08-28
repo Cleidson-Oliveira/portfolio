@@ -1,0 +1,29 @@
+[
+    {
+        "courseName": "Ignite",
+        "courseThumbnailUrl": "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/coursesThumbs/ignite.png",
+        "courseDescription": "Neste treinamento é encontrado o conteúdo mais atualizado e alinhado com o mercado envolvendo desenvolvimento Mobile, Front & Back-end com a stack Javascript e todo o ambiente que rodeia estas tecnologias.",
+        "courseSkillsLearned": [ "react", "next", "node", "reactnative", "typescript" ],
+        "courseCertificateUrl": "",
+        "courseRepositorieUrl": "https://img-b.udemycdn.com/course/240x135/1616938_8f0b_2.jpg",
+        "courseIsOver": false
+    },
+    {
+        "courseName": "Desenvolvimento Web",
+        "courseThumbnailUrl": "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/coursesThumbs/desenvolvimento_web.jpg",
+        "courseDescription": "(Em andamento) Neste curso estou aprendendo coisas novas sobre HTML, CSS e JS, além de ter o primeiro contato com SASS, Bootstrap, PHP e SQL.",
+        "courseSkillsLearned": [ "bootstrap", "sass", "php", "sql" ],
+        "courseCertificateUrl": "https://drive.google.com/file/d/1cpeEEp2s1RjUxc-DYaP_okREfYegQv6X/view?usp=sharing",
+        "courseRepositorieUrl": "https://github.com/Cleidson-Oliveira/curso-desenvolvimento-web",
+        "courseIsOver": false
+    },     
+    {
+        "courseName": "Web Design",
+        "courseThumbnailUrl": "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/coursesThumbs/web_design.jpg",
+        "courseDescription": "Neste curso iniciei o aprendizado no desenvolvimento web, aprendendo aspectos importantes das 3 linguagens básicas do front-end bem como alguns conceitos de SEO e responsividade.",
+        "courseSkillsLearned": [ "html", "css", "javascript" ],
+        "courseCertificateUrl": "https://drive.google.com/file/d/1Yg5XFL1_A1bUpIonoTPFp0JjMGNkENle/view?usp=sharing",
+        "courseRepositorieUrl": "https://github.com/Cleidson-Oliveira/curso-web-design",
+        "courseIsOver": true
+    }
+]

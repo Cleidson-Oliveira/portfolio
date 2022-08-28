@@ -1,4 +1,4 @@
-import AboutMe from "./MainSessions/About";
+import { AboutMe } from "./MainSessions/About";
 import { Contact } from "./MainSessions/Contact";
 import { EducationSession } from "./MainSessions/Education";
 import { HomeSession } from "./MainSessions/Home";

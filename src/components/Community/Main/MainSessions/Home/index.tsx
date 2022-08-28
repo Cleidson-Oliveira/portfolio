@@ -1,3 +1,6 @@
+import { useContext } from "react";
+import { LanguageContext } from "../../../../../contexts/Language/LanguagesContext";
+
 import SocialList from "../../../../Population/SocialList";
 
 import { AiFillLinkedin, AiFillGithub, AiFillCodepenCircle } from "react-icons/ai";
@@ -5,19 +8,22 @@ import { FaRegAddressCard } from "react-icons/fa";
 
 import style from "./style.module.scss";
 
+
+
 export function HomeSession () {
+    const { lang } = useContext(LanguageContext);
 
     return (
         <div className={style.homeContent}>
             <div>
                 <p>
-                    Hi there, I'm
+                    {lang === "en-US" ? "Hi there, I'm" : "Olá, eu sou"}
                 </p>
                 <h1>
                     Cleidson Oliveira
                 </h1>
                 <p>
-                    Front-end Developer
+                    {lang === "en-US" ? "Front-end Developer" : "Desenvolvedor Front-end"}
                 </p>
             </div>
 

@@ -1,6 +1,10 @@
+import { useEffect, useState } from 'react';
+
 import { A11y, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useMediaQuery } from 'react-responsive';
+
+import EducationData from "./DataEducation/index.json";
 
 import { AiFillHtml5 } from 'react-icons/ai';
 import { FaPhp, FaReact } from 'react-icons/fa';
@@ -10,26 +14,16 @@ import { IoLogoJavascript, IoLogoSass, IoLogoNodejs } from 'react-icons/io';
 import { TbBrandReactNative } from 'react-icons/tb';
 import { SiNextdotjs, SiTypescript } from 'react-icons/si';
 
-import style from "./style.module.scss";
-
 import "swiper/css";
 import "swiper/css/a11y";
 import "swiper/css/pagination";
-import { useEffect, useState } from 'react';
+
+import style from "./style.module.scss";
 
 type SkillsType = "html" | "css" | "javascript" | "typescript" | "sass" | "sql" | "php" | "bootstrap" | "react" | "next" | "node" | "reactnative"
 
-interface EducationDataType {
-    courseName: string,
-    courseThumbnailUrl: string,
-    courseDescription: string,
-    courseCertificateUrl: string,
-    courseRepositorieUrl: string,
-    courseIsOver: boolean,
-    courseSkillsLearned: SkillsType[],
-}
-
 export const EducationSession = () => {
+
     const [slidesPerView, setSlidesPerView] = useState(2.5)
 
     const smallScreen = useMediaQuery({ query: '(max-width: 599px)' });
@@ -61,36 +55,6 @@ export const EducationSession = () => {
         laptopScreen,
         largeScreen,
     ])
-
-    const EducationData: EducationDataType[] = [
-        {
-            courseName: "Ignite",
-            courseThumbnailUrl: "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/coursesThumbs/ignite.png",
-            courseDescription: "Neste treinamento é encontrado o conteúdo mais atualizado e alinhado com o mercado envolvendo desenvolvimento Mobile, Front & Back-end com a stack Javascript e todo o ambiente que rodeia estas tecnologias.",
-            courseSkillsLearned: [ "react", "next", "node", "reactnative", "typescript" ],
-            courseCertificateUrl: "",
-            courseRepositorieUrl: "https://img-b.udemycdn.com/course/240x135/1616938_8f0b_2.jpg",
-            courseIsOver: false,
-        },
-        {
-            courseName: "Desenvolvimento Web",
-            courseThumbnailUrl: "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/coursesThumbs/desenvolvimento_web.jpg",
-            courseDescription: "(Em andamento) Neste curso estou aprendendo coisas novas sobre HTML, CSS e JS, além de ter o primeiro contato com SASS, Bootstrap, PHP e SQL.",
-            courseSkillsLearned: [ "bootstrap", "sass", "php", "sql" ],
-            courseCertificateUrl: "https://drive.google.com/file/d/1cpeEEp2s1RjUxc-DYaP_okREfYegQv6X/view?usp=sharing",
-            courseRepositorieUrl: "https://github.com/Cleidson-Oliveira/curso-desenvolvimento-web",
-            courseIsOver: false,
-        },     
-        {
-            courseName: "Web Design",
-            courseThumbnailUrl: "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/coursesThumbs/web_design.jpg",
-            courseDescription: "Neste curso iniciei o aprendizado no desenvolvimento web, aprendendo aspectos importantes das 3 linguagens básicas do front-end bem como alguns conceitos de SEO e responsividade.",
-            courseSkillsLearned: [ "html", "css", "javascript" ],
-            courseCertificateUrl: "https://drive.google.com/file/d/1Yg5XFL1_A1bUpIonoTPFp0JjMGNkENle/view?usp=sharing",
-            courseRepositorieUrl: "https://github.com/Cleidson-Oliveira/curso-web-design",
-            courseIsOver: true,
-        },
-    ]
 
     const skillIcons = {
         "html": () => <AiFillHtml5 />,
@@ -124,8 +88,8 @@ export const EducationSession = () => {
                             <div className={style.skillLearned}>
                                 <p>Skills</p>
                                 <div>
-                                    {course.courseSkillsLearned.map(skill => (
-                                        <div key={skill}>{ skillIcons[skill]() }</div>
+                                    {course.courseSkillsLearned.map((skill) => (
+                                        <div key={skill}>{ skillIcons[skill as SkillsType]() }</div>
                                     ))}
                                 </div>
                             </div>
