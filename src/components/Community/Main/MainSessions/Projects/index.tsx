@@ -14,6 +14,15 @@ interface ProjectData {
 
 export const ProjectsSession = () => {
 
+    const invisibleCard = {
+        name: "Loading...",
+        image: "",
+        description: "Loading...",
+        liveProjectUrl: "",
+        repoprojectUrl: "",
+        techStack: [],
+    }
+
     const projectsData = [
         {
             name: "Ângela Reys Fotografia",
@@ -55,19 +64,11 @@ export const ProjectsSession = () => {
             repoprojectUrl: "https://github.com/Cleidson-Oliveira/weather-app",
             techStack: ["React"],
         },
-        {
-            name: "Em breve",
-            image: "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/projectThumbs/angelareysfotografia.png",
-            description: "Text about this project, text about this project, text about this project, text about this project, text about this project, text about this project",
-            liveProjectUrl: "",
-            repoprojectUrl: "",
-            techStack: ["Em breve"],
-        },
     ]
 
     const [flip, setFlip] = useState(false)
     const [firstFaceCard, setFirstFaceCard] = useState<ProjectData>(projectsData[0])
-    const [secondFaceCard, setSecondFaceCard] = useState<ProjectData>(projectsData[1])
+    const [secondFaceCard, setSecondFaceCard] = useState<ProjectData>(invisibleCard)
     const [buttonActive, setButtonActive] = useState(projectsData[0].name)
 
     const cardFace = useRef<'face1' | 'face2'>('face1');
@@ -90,8 +91,19 @@ export const ProjectsSession = () => {
         })
 
         cardFace.current = cardFace.current == "face1" ? "face2" : "face1";
-        
-        cardFace.current == "face1" ? setFirstFaceCard(data!) : setSecondFaceCard(data!)
+
+        if (cardFace.current == "face1") {
+            setFirstFaceCard(data!);
+            setTimeout(() => {
+                setSecondFaceCard(invisibleCard);
+            }, 200); 
+        } else {
+            setSecondFaceCard(data!);
+            setTimeout(() => {
+                setFirstFaceCard(invisibleCard);
+            }, 200); 
+        }
+    
     }
 
     const flipCard = (name: string) => {
