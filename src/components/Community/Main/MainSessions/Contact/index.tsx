@@ -1,11 +1,10 @@
 import { FormEvent, useRef, useState } from "react";
 
-import emailjs from "@emailjs/browser";
-
 import { ToastContainer, toast } from 'react-toastify';
 
 import style from "./style.module.scss";
 import 'react-toastify/dist/ReactToastify.css';
+import { sendMail } from "../../../../../services/mail";
 
 export function Contact () {
 
@@ -16,40 +15,19 @@ export function Contact () {
 
     const form = useRef<HTMLFormElement>(null);
 
-    const sendMail = async (e: FormEvent) => {
+    const clearForm = () => {
+        setName('');
+        setEmail('');
+        setSubject('');
+        setMessage('');
+    }
+
+    const handleSendMail = async (e: FormEvent) => {
         e.preventDefault();
 
-        try {
-            const canSend = name !== '' && email !== '' && subject !== '' && message !== '';
+        const canSend = name !== '' && email !== '' && subject !== '' && message !== '';
 
-            if (!canSend) {
-                throw new Error("Todos os campos devem ser preenchidos!");
-            }
-
-            const reference = form.current as HTMLFormElement;
-
-            const res = await emailjs.sendForm(
-                import.meta.env.VITE_MAILJS_SERVICE_ID,
-                import.meta.env.VITE_MAILJS_TEMPLATE_ID,
-                reference, 
-                import.meta.env.VITE_MAILJS_PUBLIC_KEY,
-            );
-            
-            if (res.status === 400) {
-                throw new Error("Ocorreu um erro ao enviar a mensagem!");
-            }
-
-            setName('');
-            setEmail('');
-            setSubject('');
-            setMessage('');
-
-            toast.success("Mensagem enviada com sucesso!!!");
-
-        } catch (error) {
-            const message = (error as Error).message as string
-            toast.error(message)
-        }
+        sendMail(canSend, form, clearForm);
     }
 
     return (
@@ -59,7 +37,7 @@ export function Contact () {
 
                 <form 
                     ref={form}
-                    onSubmit={sendMail}
+                    onSubmit={handleSendMail}
                 >
                     <label> Name
                         <input 
