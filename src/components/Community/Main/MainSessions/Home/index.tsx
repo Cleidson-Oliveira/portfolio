@@ -8,8 +8,6 @@ import { FaRegAddressCard } from "react-icons/fa";
 
 import style from "./style.module.scss";
 
-
-
 export function HomeSession () {
     const { lang } = useContext(LanguageContext);
 

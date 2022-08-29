@@ -1,12 +1,11 @@
 import { toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 
-
 export const sendMail = async (
     canSend: boolean, 
     form: React.RefObject<HTMLFormElement>,
     callback: () => void
-    ) => {
+) => {
 
     try {
         if (!canSend) {
