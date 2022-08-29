@@ -8,7 +8,11 @@ import style from "./style.module.scss";
 interface ProjectData {
     name: string,
     image: string,
-    description: string,
+    description: {
+        "pt-BR": string,
+        "en-US": string,
+        "es-ES": string,
+    },
     liveProjectUrl: string,
     repoprojectUrl: string,
     techStack: string[],
@@ -19,7 +23,11 @@ export const ProjectsSession = () => {
     const invisibleCard = {
         name: "Loading...",
         image: "",
-        description: "Loading...",
+        description: {
+            "pt-BR": "Carregando...",
+            "en-US": "Loading...",
+            "es-ES": "",
+        },
         liveProjectUrl: "",
         repoprojectUrl: "",
         techStack: [],

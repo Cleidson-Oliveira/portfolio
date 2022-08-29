@@ -1,13 +1,20 @@
-import style from "./style.module.scss";
+import { useContext } from "react";
+import { LanguageContext } from "../../../contexts/Language/LanguagesContext";
 
 import { FiRadio } from "react-icons/fi";
 import { GoRepo } from "react-icons/go";
+
+import style from "./style.module.scss";
 
 interface FaceCardProps {
     projectData: {
         name: string, 
         image: string, 
-        description: string,
+        description: {
+            "pt-BR": string,
+            "en-US": string,
+            "es-ES": string,
+        },
         liveProjectUrl: string,
         repoprojectUrl: string,
         techStack: string[],
@@ -15,6 +22,9 @@ interface FaceCardProps {
 }
 
 export function FaceCard ({ projectData }: FaceCardProps) {
+
+    const { lang } = useContext(LanguageContext)
+
     return (
         <div className={style.cardFace}>
             <h1>
@@ -26,17 +36,19 @@ export function FaceCard ({ projectData }: FaceCardProps) {
                         projectData.liveProjectUrl === ''
                         ? <span>
                             <FiRadio />
-                            Live Project
+                            {lang === "en-US" ? "Live Project" : "Projeto ao vivo"}
+                            
                         </span>
                         : <a target="_blank" href={projectData.liveProjectUrl}>
                             <FiRadio />
-                            Live Project
+                            {lang === "en-US" ? "Live Project" : "Projeto ao vivo"}
                         </a>
                     }
 
                     <a target="_blank" href={projectData.repoprojectUrl}>
                         <GoRepo />
-                        Repository
+                        {lang === "en-US" ? "Repository" : "Repositório"}
+
                     </a>
                 </div>
                 <div>
@@ -48,7 +60,7 @@ export function FaceCard ({ projectData }: FaceCardProps) {
                 </div>
             </div>
             <span>
-                { projectData.description }
+                { projectData.description[lang] }
             </span>
             <span>
                 {projectData.techStack.map(item => (
