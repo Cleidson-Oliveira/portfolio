@@ -2,7 +2,11 @@
     {
         "courseName": "Ignite",
         "courseThumbnailUrl": "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/coursesThumbs/ignite.png",
-        "courseDescription": "Neste treinamento é encontrado o conteúdo mais atualizado e alinhado com o mercado envolvendo desenvolvimento Mobile, Front & Back-end com a stack Javascript e todo o ambiente que rodeia estas tecnologias.",
+        "courseDescription": {
+            "pt-BR": "Neste treinamento é encontrado o conteúdo mais atualizado e alinhado com o mercado envolvendo desenvolvimento Mobile, Front & Back-end com a stack Javascript e todo o ambiente que rodeia estas tecnologias.",
+            "en-US": "In this training you will find the most up-to-date and market-aligned content involving Mobile, Front & Back-end development with the Javascript stack and the entire environment that surrounds these technologies.",
+            "es-ES": ""
+        }, 
         "courseSkillsLearned": [ "react", "next", "node", "reactnative", "typescript" ],
         "courseCertificateUrl": "",
         "courseRepositorieUrl": "https://img-b.udemycdn.com/course/240x135/1616938_8f0b_2.jpg",
@@ -11,7 +15,11 @@
     {
         "courseName": "Desenvolvimento Web",
         "courseThumbnailUrl": "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/coursesThumbs/desenvolvimento_web.jpg",
-        "courseDescription": "(Em andamento) Neste curso estou aprendendo coisas novas sobre HTML, CSS e JS, além de ter o primeiro contato com SASS, Bootstrap, PHP e SQL.",
+        "courseDescription": {
+            "pt-BR": "Neste curso estou aprendendo coisas novas sobre HTML, CSS e JS, além de ter o primeiro contato com SASS, Bootstrap, PHP e SQL.",
+            "en-US": "In this course I am learning new things about HTML, CSS and JS, as well as being my first contact with SASS, Bootstrap, PHP and SQL.",
+            "es-ES": ""
+        },        
         "courseSkillsLearned": [ "bootstrap", "sass", "php", "sql" ],
         "courseCertificateUrl": "https://drive.google.com/file/d/1cpeEEp2s1RjUxc-DYaP_okREfYegQv6X/view?usp=sharing",
         "courseRepositorieUrl": "https://github.com/Cleidson-Oliveira/curso-desenvolvimento-web",
@@ -20,7 +28,11 @@
     {
         "courseName": "Web Design",
         "courseThumbnailUrl": "https://raw.githubusercontent.com/Cleidson-Oliveira/portfolio/main/images/coursesThumbs/web_design.jpg",
-        "courseDescription": "Neste curso iniciei o aprendizado no desenvolvimento web, aprendendo aspectos importantes das 3 linguagens básicas do front-end bem como alguns conceitos de SEO e responsividade.",
+        "courseDescription": {
+            "pt-BR": "Neste curso iniciei o aprendizado no desenvolvimento web, aprendendo aspectos importantes das 3 linguagens básicas do front-end bem como alguns conceitos de SEO e design responsivo.",
+            "en-US": "In this course I started learning about web development, learning important aspects of the 3 basic languages of the front-end as well as some concepts of SEO and responsive design.",
+            "es-ES": ""
+        },
         "courseSkillsLearned": [ "html", "css", "javascript" ],
         "courseCertificateUrl": "https://drive.google.com/file/d/1Yg5XFL1_A1bUpIonoTPFp0JjMGNkENle/view?usp=sharing",
         "courseRepositorieUrl": "https://github.com/Cleidson-Oliveira/curso-web-design",

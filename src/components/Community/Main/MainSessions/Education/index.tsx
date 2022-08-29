@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 
 import { A11y, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -19,12 +19,15 @@ import "swiper/css/a11y";
 import "swiper/css/pagination";
 
 import style from "./style.module.scss";
+import { LanguageContext } from '../../../../../contexts/Language/LanguagesContext';
 
 type SkillsType = "html" | "css" | "javascript" | "typescript" | "sass" | "sql" | "php" | "bootstrap" | "react" | "next" | "node" | "reactnative"
 
 export const EducationSession = () => {
 
-    const [slidesPerView, setSlidesPerView] = useState(2.5)
+    const [slidesPerView, setSlidesPerView] = useState(2.5);
+
+    const { lang } = useContext(LanguageContext);
 
     const smallScreen = useMediaQuery({ query: '(max-width: 599px)' });
     const mobileScreen = useMediaQuery({ query: '(min-width: 600px) and (max-width: 767px)' });
@@ -84,9 +87,9 @@ export const EducationSession = () => {
                         <div className={style.educationCard}>
                             <img src={course.courseThumbnailUrl} alt={course.courseName} />
                             <h2>{course.courseName}</h2>
-                            <p>{course.courseDescription}</p>
+                            <p>{course.courseDescription[lang]}</p>
                             <div className={style.skillLearned}>
-                                <p>Skills</p>
+                                <p>{lang === "en-US" ? "Skills" : "Habilidades"}</p>
                                 <div>
                                     {course.courseSkillsLearned.map((skill) => (
                                         <div key={skill}>{ skillIcons[skill as SkillsType]() }</div>
@@ -96,16 +99,16 @@ export const EducationSession = () => {
                             <div className={style.LinksConteiner}>
                                 { course.courseIsOver ? (
                                     <a href={course.courseCertificateUrl} className={style.link} target="_blank">
-                                        Certificate
+                                        {lang === "en-US" ? "Certificate" : "Certificado"}
                                     </a>
                                 ) : (
                                     <span className={style.inactiveLink} >
-                                        In progress
+                                        {lang === "en-US" ? "In progress" : "Em andamento"}
                                     </span>
                                 )}
 
                                 <a className={style.link} href={course.courseRepositorieUrl} target="_blank">
-                                    Repository
+                                    {lang === "en-US" ? "Repository" : "Repositório"}
                                 </a>
                             </div>
                         </div>
