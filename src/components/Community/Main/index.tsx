@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { LanguageContext } from "../../../contexts/Language/LanguagesContext";
 import { AboutMe } from "./MainSessions/About";
 import { Contact } from "./MainSessions/Contact";
 import { EducationSession } from "./MainSessions/Education";
@@ -8,40 +10,42 @@ import style from "./style.module.scss";
 
 export default function Main () {
 
+    const { lang } = useContext(LanguageContext);
+
     return (
         <main className={style.wrapper}>
 
             <section className={style.card}>
                 <h1 className={style.title}>
-                    Home
+                    {lang === "en-US" ? "Home" : "Início"}
                 </h1>
                 <HomeSession />
             </section>
 
             <section className={style.card}>
                 <h1 className={style.title} id="teste">
-                    About me
+                    {lang === "en-US" ? "About me" : "Sobre"}
                 </h1>
                 <AboutMe />
             </section>
 
             <section className={style.card}>
                 <h1 className={style.title}>
-                    Projects
+                    {lang === "en-US" ? "Projects" : "Projetos"}
                 </h1>
                 <ProjectsSession />
             </section>
 
             <section className={style.card}>
                 <h1 className={style.title}>
-                    Education
+                    {lang === "en-US" ? "Education" : "Cursos"}
                 </h1>
                 <EducationSession />
             </section>
             
             <section className={style.card}>
                 <h1 className={style.title}>
-                    Contact
+                    {lang === "en-US" ? "Contact" : "Contato"}
                 </h1>
                 <Contact />
             </section>

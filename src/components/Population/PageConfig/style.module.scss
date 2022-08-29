@@ -1,0 +1,19 @@
+.menuConfig {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    button:hover::after {
+        position: absolute;
+        bottom: -1.8rem;
+        width: 5rem;
+        color: white;
+        text-transform: uppercase;
+        font-size: .6rem;
+        position: relative;
+    }
+
+    button:nth-child(1):hover::after {
+        content: "Translate";
+    }
+}

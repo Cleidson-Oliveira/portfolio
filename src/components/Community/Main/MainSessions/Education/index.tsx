@@ -103,7 +103,7 @@ export const EducationSession = () => {
                                     </a>
                                 ) : (
                                     <span className={style.inactiveLink} >
-                                        {lang === "en-US" ? "In progress" : "Em andamento"}
+                                        {lang === "en-US" ? "In progress" : "Em evolução"}
                                     </span>
                                 )}
 
