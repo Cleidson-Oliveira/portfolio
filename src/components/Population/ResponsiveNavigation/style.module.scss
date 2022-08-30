@@ -3,14 +3,14 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: .7rem;
     position: fixed;
     top: 2.3rem;
     left: 10px;
     z-index: 10;
     border-radius: .3rem;
     padding: .7rem;
-    background: var(--blue-dark);
+    background-color: var(--blue-dark);
 
     button:hover::after {
         position: absolute;
@@ -24,5 +24,13 @@
 @media screen and ( max-width: 992px) {
     .menu {
         display: flex;
+
+        & button:last-child {
+            background-color: var(--grey-middle);
+
+            svg {
+                color: var(--blue-light);
+            }
+        }
     }
 }

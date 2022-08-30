@@ -5,12 +5,18 @@ import { FaUser } from "react-icons/fa";
 import { MdWork } from "react-icons/md";
 
 import style from "./style.module.scss";
+import { BsFillGearFill } from "react-icons/bs";
 
-export default function ResponsiveNavigation () {
+interface ResponsiveNavigationProps {
+    controlerMenuMobile: () => void
+}
+
+export default function ResponsiveNavigation ({ controlerMenuMobile }: ResponsiveNavigationProps) {
 
     const handleFocus = (n: number) => {
         window.scrollTo(0, window.innerHeight * n)
     }
+
     return (
         <nav className={style.menu}>
             <Button onClick={() => {handleFocus(0)}}>
@@ -31,6 +37,10 @@ export default function ResponsiveNavigation () {
             
             <Button onClick={() => {handleFocus(4)}}>
                 <AiFillPhone />
+            </Button>
+
+            <Button onClick={() => {controlerMenuMobile()}}>
+                <BsFillGearFill />
             </Button>
         </nav>
     )
