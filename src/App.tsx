@@ -1,12 +1,14 @@
-import ResponsiveNavigation from "./components/Population/ResponsiveNavigation";
-import Aside from "./components/Community/Aside";
-import Main from "./components/Community/Main";
+import { useState } from "react";
+import { useMediaQuery } from "react-responsive";
+import { PrismicProvider } from '@prismicio/react';
+import { client } from './services/prismic';
+import ResponsiveNavigation from "./components/ResponsiveNavigation";
+import Aside from "./components/Aside";
+import Main from "./components/Main";
 import { LanguageContextProvider } from "./contexts/Language/LanguageProvider";
 
-import style from "../styles/style.module.scss"
-import "../styles/global.scss";
-import { useEffect, useState } from "react";
-import { useMediaQuery } from "react-responsive";
+import style from "./styles/style.module.scss"
+import "./styles/global.scss";
 
 function App () {
 
@@ -18,18 +20,16 @@ function App () {
     setShowAsideLikeMenuMobile(prevState => !prevState);
   }
 
-  useEffect(()=>{
-    console.log(showAsidelikeMenuMobile, laptopScreen)
-  },[showAsidelikeMenuMobile, laptopScreen])
-
   return (
-    <LanguageContextProvider>
-      <div className={style.conteiner}>
-        <ResponsiveNavigation controlerMenuMobile={controlerMenuMobile}/>
-        {(laptopScreen || showAsidelikeMenuMobile) && <Aside controlerMenuMobile={controlerMenuMobile}/>}
-        <Main />
-      </div>
-    </LanguageContextProvider>
+    <PrismicProvider client={client}>
+      <LanguageContextProvider>
+        <div className={style.conteiner}>
+          <ResponsiveNavigation controlerMenuMobile={controlerMenuMobile}/>
+          {(laptopScreen || showAsidelikeMenuMobile) && <Aside controlerMenuMobile={controlerMenuMobile}/>}
+          <Main />
+        </div>
+      </LanguageContextProvider>
+    </PrismicProvider>
   )
 }
 
