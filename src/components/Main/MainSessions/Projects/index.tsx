@@ -2,9 +2,22 @@ import { useEffect, useRef, useState } from "react";
 import { useAllPrismicDocumentsByType } from "@prismicio/react";
 import { FaceCard } from "../../../FaceCard";
 
-import projectsData from "./DataProjects/index.json";
-
 import style from "./style.module.scss";
+
+interface DescriptionsType {
+    portuguese: string,
+    english: string
+}
+
+interface PrismicData {
+    demo: string,
+    descriptions: DescriptionsType[],
+    repo: string,
+    tech_stak: {tech: string}[],
+    thumb: { url: string },
+    title:  string,
+    type: "front-end" | "mobile" | "back-end"
+}
 
 interface ProjectData {
     name: string,
@@ -21,88 +34,75 @@ interface ProjectData {
 
 export const ProjectsSession = () => {
 
-    const [documents] = useAllPrismicDocumentsByType("project");
+    const [ documents ] = useAllPrismicDocumentsByType("project");
 
-    useEffect(() => {
-        if (documents) {
-            documents.forEach(doc => console.log(doc.data))
-        }
-    }, [documents])
-
-    const invisibleCard = {
-        name: "Loading...",
-        image: "",
-        description: {
-            "pt-BR": "Carregando...",
-            "en-US": "Loading...",
-            "es-ES": "",
-        },
-        liveProjectUrl: "",
-        repoprojectUrl: "",
-        techStack: [],
-    }
-
-    const [flip, setFlip] = useState(false)
-    const [firstFaceCard, setFirstFaceCard] = useState<ProjectData>(projectsData[0])
-    const [secondFaceCard, setSecondFaceCard] = useState<ProjectData>(invisibleCard)
-    const [buttonActive, setButtonActive] = useState(projectsData[0].name)
-
-    const cardFace = useRef<'face1' | 'face2'>('face1');
-
-    const handleFlipState = () => {
-        setFlip(prevState => !prevState);
-    }
-
-    const handleButtonActive = (name: string) => {
-        setButtonActive(name);
-    }
-    
-    const changeFaceCardData = (nameParam: string) => {
-        let data: ProjectData;
-
-        projectsData.forEach((projectData) => {
-            if (projectData.name == nameParam) {
-                data = projectData;
-            }
-        })
-
-        cardFace.current = cardFace.current == "face1" ? "face2" : "face1";
-
-        if (cardFace.current == "face1") {
-            setFirstFaceCard(data!);
-            setTimeout(() => {
-                setSecondFaceCard(invisibleCard);
-            }, 200); 
-        } else {
-            setSecondFaceCard(data!);
-            setTimeout(() => {
-                setFirstFaceCard(invisibleCard);
-            }, 200); 
-        }
-    
-    }
+    const [ projectsData, setProjectsData ] = useState< ProjectData[] | null >(null);
+    const [ cardFlipped, setCardFlipped ] = useState(false);
+    const [ face1, setFace1 ] = useState<ProjectData | null>(null);
+    const [ face2, setFace2 ] = useState<ProjectData | null>(null);
+    const [ buttonActive, setButtonActive ] = useState< string | null>(null);
 
     const flipCard = (name: string) => {
-
-        if ( cardFace.current == "face1" && name == firstFaceCard.name ) {
-            return;
+        const project = projectsData!.find(project => project.name == name);
+        
+        if (!cardFlipped) {
+            if (name == face1!.name) return;
+            setFace2(project!);
+        } else {
+            if (name == face2!.name) return;
+            setFace1(project!);
         }
-
-        if ( cardFace.current == "face2" && name == secondFaceCard.name ) {
-            return;
-        }
-
-        changeFaceCardData(name);
-        handleButtonActive(name);
-        handleFlipState();
+        
+        setButtonActive(project!.name);
+        setCardFlipped(prevState => !prevState);
+        setTimeout(() => {
+            cardFlipped ? setFace2(null) : setFace1(null);
+        }, 300)
+             
     }
+
+    const changeDataType = () => {
+        if (documents) {
+            let projectData: ProjectData[] = []
+
+            documents.forEach(document => {
+                const prismicDoc = document.data as PrismicData;
+                const techStack = prismicDoc.tech_stak.map(tech => tech.tech)
+
+                projectData.push({
+                    name: prismicDoc.title,
+                    image: prismicDoc.thumb.url,
+                    liveProjectUrl: prismicDoc.demo,
+                    repoprojectUrl: prismicDoc.repo,
+                    techStack,
+                    description: {
+                        "pt-BR": prismicDoc.descriptions[0].portuguese,
+                        "en-US": prismicDoc.descriptions[0].english,
+                        "es-ES": ""
+                    },
+                })
+            })
+
+            setProjectsData(projectData);
+        }
+    }
+
+    useEffect(() => {
+        changeDataType()
+    }, [documents]);
+
+    useEffect(() => {
+        if (projectsData) {
+            setFace1(projectsData[0]);
+        }
+    }, [projectsData])
 
     return (
         <div className={style.projectsContent}>
             <nav className={style.menuProjects}>
-                {projectsData.map(({name})=>(
+                {projectsData && projectsData.map(({name})=>(
                     <button
-                        className={buttonActive == name ? style.active : ''}
+                        className={buttonActive == name ? style.active : ""}
                         key={name}
                         onClick={() => {flipCard(name)}}
                     >
@@ -110,9 +110,9 @@ export const ProjectsSession = () => {
                     </button>
                 ))}
             </nav>
-            <div className={flip == true ? style.cardProjectFlip : style.cardProject}>
-                <FaceCard projectData={firstFaceCard} />
-                <FaceCard projectData={secondFaceCard} />
+            <div className={cardFlipped ? style.cardProjectFlip : style.cardProject}>
+                <FaceCard projectData={face1} />
+                <FaceCard projectData={face2} />
             </div>
         </div>
     )
