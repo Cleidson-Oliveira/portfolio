@@ -11,12 +11,14 @@ interface DescriptionsType {
 
 interface PrismicData {
     demo: string,
-    descriptions: DescriptionsType[],
+    portuguese_description: string,
+    english_description: string,
     repo: string,
     tech_stak: {tech: string}[],
     thumb: { url: string },
     title:  string,
-    type: "front-end" | "mobile" | "back-end"
+    type: "front-end" | "mobile" | "back-end",
+    sort_number: number
 }
 
 interface ProjectData {
@@ -30,6 +32,7 @@ interface ProjectData {
     liveProjectUrl: string,
     repoprojectUrl: string,
     techStack: string[],
+    sortNumber: number
 }
 
 export const ProjectsSession = () => {
@@ -61,6 +64,22 @@ export const ProjectsSession = () => {
              
     }
 
+    const sortData = (projectData: ProjectData[]) => {
+        const sortProjects: ProjectData[] = [];
+
+        for (let i = 1; i <= projectData.length; i++) {
+
+            const sortedProject = projectData.find(project => {
+                if (project.sortNumber == i) return true;
+                return false
+            })
+
+            if (sortedProject) sortProjects.push(sortedProject);
+        }
+
+        return sortProjects
+    }
+
     const changeDataType = () => {
         if (documents) {
             let projectData: ProjectData[] = []
@@ -76,14 +95,15 @@ export const ProjectsSession = () => {
                     repoprojectUrl: prismicDoc.repo,
                     techStack,
                     description: {
-                        "pt-BR": prismicDoc.descriptions[0].portuguese,
-                        "en-US": prismicDoc.descriptions[0].english,
+                        "pt-BR": prismicDoc.portuguese_description,
+                        "en-US": prismicDoc.english_description,
                         "es-ES": ""
                     },
+                    sortNumber: prismicDoc.sort_number
                 })
             })
 
-            setProjectsData(projectData);
+            setProjectsData(sortData(projectData));
         }
     }
 
@@ -94,6 +114,7 @@ export const ProjectsSession = () => {
     useEffect(() => {
         if (projectsData) {
             setFace1(projectsData[0]);
+            setButtonActive(projectsData[0].name)
         }
     }, [projectsData])
 

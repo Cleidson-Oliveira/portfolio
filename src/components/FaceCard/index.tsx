@@ -37,7 +37,7 @@ export function FaceCard ({ projectData }: FaceCardProps) {
                     <div>
                         <div className={style.projectLinks}>
                             {
-                                projectData.liveProjectUrl === ''
+                                !projectData.liveProjectUrl
                                 ? <span>
                                     <FiRadio />
                                     {lang === "en-US" ? "Live Project" : "Projeto ao vivo"}
