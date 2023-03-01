@@ -23,7 +23,7 @@
         "courseSkillsLearned": [ "bootstrap", "sass", "php", "sql" ],
         "courseCertificateUrl": "https://drive.google.com/file/d/1cpeEEp2s1RjUxc-DYaP_okREfYegQv6X/view?usp=sharing",
         "courseRepositorieUrl": "https://github.com/Cleidson-Oliveira/curso-desenvolvimento-web",
-        "courseIsOver": false
+        "courseIsOver": true
     },     
     {
         "courseName": "Web Design",
