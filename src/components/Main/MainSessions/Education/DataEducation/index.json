@@ -8,9 +8,9 @@
             "es-ES": ""
         }, 
         "courseSkillsLearned": [ "react", "next", "node", "reactnative", "typescript" ],
-        "courseCertificateUrl": "",
-        "courseRepositorieUrl": "",
-        "courseIsOver": false
+        "courseCertificateUrl": "https://drive.google.com/file/d/1lgh21ScN2PuwDvBWwjdc8-MDuI6utMXL/view?usp=sharing",
+        "courseRepositorieUrl": "https://github.com/Cleidson-Oliveira/ignite",
+        "courseIsOver": true
     },
     {
         "courseName": "Desenvolvimento Web",
